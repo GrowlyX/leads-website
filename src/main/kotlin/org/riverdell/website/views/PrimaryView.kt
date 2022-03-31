@@ -1,6 +1,7 @@
 package org.riverdell.website.views
 
 import com.example.demo.GreetService
+import com.github.mvysny.karibudsl.v10.*
 import com.vaadin.flow.component.Key
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.button.ButtonVariant
@@ -20,24 +21,24 @@ import com.vaadin.flow.router.Route
     value = "./styles/vaadin-text-field-styles.css",
     themeFor = "vaadin-text-field"
 )
-class PrimaryView : VerticalLayout()
+class PrimaryView : KComposite()
 {
     init
     {
-        val textField = TextField(
-            "Please enter your name:"
-        )
+        ui {
+            horizontalLayout {
+                button("Say hellooo") {
+                    onLeftClick {
+                        Notification.show("hiii")
+                    }
 
-        val button = Button(
-            "Say hello"
-        ) {
-            Notification.show("")
+                    addThemeVariants(
+                        ButtonVariant.LUMO_PRIMARY
+                    )
+
+                    addClickShortcut(Key.ENTER)
+                }
+            }
         }
-
-        button.addThemeVariants(ButtonVariant.LUMO_PRIMARY)
-        button.addClickShortcut(Key.ENTER)
-
-        addClassName("centered-content")
-        add(textField, button)
     }
 }
