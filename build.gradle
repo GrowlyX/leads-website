@@ -1,38 +1,54 @@
-buildscript {
-    repositories {
-        maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
-    }
-}
 plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-	id 'java'
-	id 'com.vaadin'
+	id "java"
+	id "com.vaadin"
+	id "application"
+	id "maven-publish"
+	id "com.github.johnrengelman.shadow" version "7.1.2"
+	id "org.jetbrains.kotlin.jvm" version "1.6.10"
+	id "org.springframework.boot" version "2.2.4.RELEASE"
+	id "io.spring.dependency-management" version "1.0.9.RELEASE"
 }
 
-defaultTasks("clean", "build")
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+group "org.riverdell.website"
+version "1.0.0"
 
 repositories {
 	mavenCentral()
-	maven { setUrl("https://maven.vaadin.com/vaadin-addons") }
+	mavenLocal()
+
+	maven { url "https://maven.vaadin.com/vaadin-addons" }
+	maven { url "https://maven.vaadin.com/vaadin-prereleases" }
+
+	maven {
+		url "https://jitpack.io"
+	}
+}
+
+application {
+	mainClassName "org.riverdell.website.WebsiteApp"
 }
 
 configurations {
 	developmentOnly
+
 	runtimeClasspath {
 		extendsFrom developmentOnly
 	}
 }
 
 dependencies {
-	implementation('com.vaadin:vaadin-spring-boot-starter')
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+	implementation "com.vaadin:vaadin-spring-boot-starter"
+	developmentOnly "org.springframework.boot:spring-boot-devtools"
+
+	implementation 'com.github.mvysny.karibudsl:karibu-dsl:1.1.1'
+
+	implementation "io.github.reactivecircus.cache4k:cache4k:0.4.0"
+	implementation "com.github.devrawr:honey:9e2876f3ab"
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+		exclude group: "org.junit.vintage", module: "junit-vintage-engine"
 	}
 }
 
@@ -42,13 +58,36 @@ dependencyManagement {
 	}
 }
 
+compileKotlin {
+	kotlinOptions.javaParameters = true
+	kotlinOptions.jvmTarget = "17"
+}
+
+shadowJar {
+	archiveClassifier.set("")
+
+	exclude "**/*.kotlin_metadata"
+	exclude "**/*.kotlin_builtins"
+	exclude "META-INF/"
+
+	archiveFileName = "leads-site-prod.jar"
+}
+
+publishing {
+	publications {
+		shadow(MavenPublication) { publication ->
+			from components.kotlin
+		}
+	}
+}
+
 test {
 	useJUnitPlatform()
 }
 
-// The following pnpmEnable = true is not needed as pnpm is used by default,
-// this is just an example of how to configure the Gradle Vaadin Plugin:
-// for more configuration options please see: https://vaadin.com/docs/latest/guide/start/gradle/#all-options
 vaadin {
-	pnpmEnable = true
+	pnpmEnable true
 }
+
+defaultTasks("clean", "build")
+tasks.build.dependsOn(shadowJar)
