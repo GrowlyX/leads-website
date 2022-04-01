@@ -40,7 +40,9 @@ dependencies {
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
 	implementation "com.vaadin:vaadin-spring-boot-starter"
+
 	developmentOnly "org.springframework.boot:spring-boot-devtools"
+	developmentOnly "org.springframework.boot:spring-boot-starter-tomcat"
 
 	implementation 'com.github.mvysny.karibudsl:karibu-dsl:1.1.1'
 
@@ -60,7 +62,7 @@ dependencyManagement {
 
 compileKotlin {
 	kotlinOptions.javaParameters = true
-	kotlinOptions.jvmTarget = "17"
+	kotlinOptions.jvmTarget = "11"
 }
 
 shadowJar {

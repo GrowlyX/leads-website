@@ -1,0 +1,244 @@
+2022-04-01 15:58:07.448  INFO 5620 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 5620 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
+2022-04-01 15:58:07.449  INFO 5620 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
+2022-04-01 15:58:07.495  WARN 5620 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-04-01 15:58:07.500  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-01 15:58:07.506  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-01 15:58:08.276  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-04-01 15:58:08.285  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-01 15:58:08.285  INFO 5620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2022-04-01 15:58:08.433  INFO 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-01 15:58:08.433  INFO 5620 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 927 ms
+2022-04-01 15:58:08.677  INFO 5620 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 50 ms
+2022-04-01 15:58:12.229  INFO 5620 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 3369 ms
+2022-04-01 15:58:12.273  INFO 5620 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
+2022-04-01 15:58:12.306 ERROR 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Exception sending context initialized event to listener instance of class [com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener]
+
+java.lang.RuntimeException: Unable to initialize com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$FailFastServletContextListener.contextInitialized(VaadinServletContextInitializer.java:191) ~[vaadin-spring-23.0.3.jar:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.lambda$contextInitialized$0(VaadinServletContextInitializer.java:213) ~[vaadin-spring-23.0.3.jar:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.contextInitialized(VaadinServletContextInitializer.java:213) ~[vaadin-spring-23.0.3.jar:na]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4683) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5146) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
+	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+Caused by: java.lang.IllegalStateException: There can only be one @PWA annotation and it must be set on the AppShellConfigurator implementor.
+	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.discoverPwa(FullDependenciesScanner.java:502) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.<init>(FullDependenciesScanner.java:174) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.<init>(FullDependenciesScanner.java:115) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:127) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:92) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.NodeTasks.<init>(NodeTasks.java:727) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.NodeTasks.<init>(NodeTasks.java:55) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.flow.server.frontend.NodeTasks$Builder.build(NodeTasks.java:236) ~[flow-server-23.0.3.jar:23.0.3]
+	at com.vaadin.base.devserver.startup.DevModeInitializer.initDevModeHandler(DevModeInitializer.java:341) ~[vaadin-dev-server-23.0.3.jar:na]
+	at com.vaadin.base.devserver.DevModeHandlerManagerImpl.initDevModeHandler(DevModeHandlerManagerImpl.java:80) ~[vaadin-dev-server-23.0.3.jar:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener.failFastContextInitialized(VaadinServletContextInitializer.java:474) ~[vaadin-spring-23.0.3.jar:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$FailFastServletContextListener.contextInitialized(VaadinServletContextInitializer.java:187) ~[vaadin-spring-23.0.3.jar:na]
+	... 47 common frames omitted
+
+2022-04-01 15:58:12.307 ERROR 5620 --- [restartedMain] o.apache.catalina.core.StandardContext   : One or more listeners failed to start. Full details will be found in the appropriate container log file
+2022-04-01 15:58:12.307 ERROR 5620 --- [restartedMain] o.apache.catalina.core.StandardContext   : Context [] startup failed due to previous errors
+2022-04-01 15:58:12.309 ERROR 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Exception sending context destroyed event to listener instance of class [com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener]
+
+java.lang.NullPointerException: null
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener.contextDestroyed(VaadinServletContextInitializer.java:491) ~[vaadin-spring-23.0.3.jar:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.lambda$contextDestroyed$1(VaadinServletContextInitializer.java:218) ~[vaadin-spring-23.0.3.jar:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.contextDestroyed(VaadinServletContextInitializer.java:218) ~[vaadin-spring-23.0.3.jar:na]
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4730) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5396) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:187) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
+	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+
+2022-04-01 15:58:13.002  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-01 15:58:13.007  WARN 5620 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-01 15:58:13.012  INFO 5620 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-01 15:58:13.019 ERROR 5620 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
+	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[] failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:171) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:110) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	... 19 common frames omitted
+
+2022-04-01 15:59:05.104  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 27368 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
+2022-04-01 15:59:05.105  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
+2022-04-01 15:59:05.150  WARN 27368 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-04-01 15:59:05.161  INFO 27368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-01 15:59:05.162  INFO 27368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-01 15:59:05.871  INFO 27368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-04-01 15:59:05.879  INFO 27368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-01 15:59:05.879  INFO 27368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2022-04-01 15:59:05.969  INFO 27368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-01 15:59:05.969  INFO 27368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 807 ms
+2022-04-01 15:59:06.110  INFO 27368 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 20 ms
+2022-04-01 15:59:08.831  INFO 27368 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2663 ms
+2022-04-01 15:59:08.874  INFO 27368 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
+2022-04-01 15:59:08.906  INFO 27368 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 22 ms.
+2022-04-01 15:59:08.970  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Running `pnpm install` to resolve and optionally download frontend dependencies. This may take a moment, please stand by...
+2022-04-01 15:59:09.046  INFO 27368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-01 15:59:09.328  INFO 27368 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2022-04-01 15:59:09.363  INFO 27368 --- [cluster-ClusterId{value='6247598dd7dd7a09c636d834', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2022-04-01 15:59:09.367  INFO 27368 --- [cluster-ClusterId{value='6247598dd7dd7a09c636d834', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2665300}
+2022-04-01 15:59:09.377  INFO 27368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-01 15:59:09.400  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
+2022-04-01 15:59:09.401  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
+2022-04-01 15:59:09.419  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+2022-04-01 15:59:09.423  INFO 27368 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+2022-04-01 15:59:09.426  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+2022-04-01 15:59:09.431  INFO 27368 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
+2022-04-01 15:59:09.439  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
+2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
+2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+2022-04-01 15:59:09.443  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
+2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
+2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
+2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
+2022-04-01 15:59:09.453  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+2022-04-01 15:59:09.490  INFO 27368 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
+Vaadin is running in DEBUG MODE.
+When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
+2022-04-01 15:59:09.521  INFO 27368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-04-01 15:59:09.524  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 4.758 seconds (JVM running for 6.762)
+2022-04-01 15:59:11.622  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
+2022-04-01 15:59:12.513  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : using 'C:\Users\satis\.vaadin\node\node.exe C:\Users\satis\.vaadin\node\node_modules\npm\bin\npx-cli.js --yes --quiet pnpm@5.18.10 --shamefully-hoist=true --ignore-scripts install' for frontend package installation
+2022-04-01 15:59:22.829  INFO 27368 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

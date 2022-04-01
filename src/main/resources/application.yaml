@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+project:
+  name: leads-website
+  version: 1.0
+  description: something something something
+
+logging:
+  file: runtime_prod.log
+  org.hibernate: INFO
