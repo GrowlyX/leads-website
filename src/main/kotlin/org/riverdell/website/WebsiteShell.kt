@@ -19,7 +19,7 @@ import org.riverdell.website.WebsiteShell.NAME_SHORT
 @PageTitle(META_TITLE)
 object WebsiteShell : AppShellConfigurator
 {
-    const val NAME = "RD Leads Backbone"
+    const val NAME = "RD Backbone"
     const val NAME_SHORT = "RDL Backbone"
 
     const val META_TITLE = "RD Leads"
