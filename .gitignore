@@ -8,6 +8,12 @@ gradle.properties
 # Mac
 .DS_Store
 
+# Npm
+.pnpm-debug.log
+
+# Runtime
+runtime_prod.log
+
 # Maven
 log/
 /target/
