@@ -48,6 +48,7 @@ dependencies {
 
 	implementation "io.github.reactivecircus.cache4k:cache4k:0.4.0"
 	implementation "com.github.devrawr:honey:9e2876f3ab"
+	implementation "com.github.growlyx:flavor:d8cd80cd23"
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude group: "org.junit.vintage", module: "junit-vintage-engine"
