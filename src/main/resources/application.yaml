@@ -9,3 +9,6 @@ project:
 logging:
   file: runtime_prod.log
   org.hibernate: INFO
+
+vaadin:
+  productionMode: true

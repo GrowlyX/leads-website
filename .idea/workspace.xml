@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4144b2f4-602c-422c-bf62-8307f5e4dd85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.pnpm-debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime_prod.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime_prod.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteShell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteShell.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/views/PrimaryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/views/PrimaryView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -86,6 +85,11 @@
     <property name="project.structure.side.proportion" value="0.28045976" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="ts.external.directory.path" value="C:\Users\satis\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-1\213.7172.25\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Organizations\riverdell\leads-website\src\main\resources\static" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -138,7 +142,7 @@
       <workItem from="1648681458528" duration="3529000" />
       <workItem from="1648771393071" duration="112000" />
       <workItem from="1648842376176" duration="191000" />
-      <workItem from="1648842597589" duration="1071000" />
+      <workItem from="1648842597589" duration="1681000" />
     </task>
     <task id="LOCAL-00001" summary="Kotlin migration &amp; gradle updates">
       <created>1648690690313</created>
@@ -168,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648843351694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add additional meta configuration to our shell">
+      <created>1648843988231</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648843988231</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +191,8 @@
     <MESSAGE value="DSL based composites" />
     <MESSAGE value="Remove example PWAs &amp; update conf" />
     <MESSAGE value="Update git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update git ignore" />
+    <MESSAGE value="Add additional meta configuration to our shell" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add additional meta configuration to our shell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
