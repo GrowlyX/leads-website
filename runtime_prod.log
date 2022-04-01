@@ -765,3 +765,4 @@ When deploying application for production, remember to disable debug features. S
 2022-04-01 16:20:32.465  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
 2022-04-01 16:20:32.469  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 11806ms
 2022-04-01 16:20:32.550  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
+2022-04-01 16:32:08.191  INFO 15964 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
