@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4144b2f4-602c-422c-bf62-8307f5e4dd85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pnpm-debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteApp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime_prod.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime_prod.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteShell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/WebsiteShell.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/views/PrimaryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/riverdell/website/views/PrimaryView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +60,16 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="277mJsYBTAeHGaO2MzFAzXGwY5s" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -136,7 +138,7 @@
       <workItem from="1648681458528" duration="3529000" />
       <workItem from="1648771393071" duration="112000" />
       <workItem from="1648842376176" duration="191000" />
-      <workItem from="1648842597589" duration="466000" />
+      <workItem from="1648842597589" duration="1071000" />
     </task>
     <task id="LOCAL-00001" summary="Kotlin migration &amp; gradle updates">
       <created>1648690690313</created>
@@ -152,16 +154,33 @@
       <option name="project" value="LOCAL" />
       <updated>1648690933114</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove example PWAs &amp; update conf">
+      <created>1648843192729</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648843192729</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update git ignore">
+      <created>1648843351694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648843351694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Kotlin migration &amp; gradle updates" />
     <MESSAGE value="DSL based composites" />
-    <option name="LAST_COMMIT_MESSAGE" value="DSL based composites" />
+    <MESSAGE value="Remove example PWAs &amp; update conf" />
+    <MESSAGE value="Update git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update git ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

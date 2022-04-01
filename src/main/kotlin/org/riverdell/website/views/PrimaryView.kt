@@ -32,7 +32,7 @@ class PrimaryView : KComposite()
                     }
 
                     addThemeVariants(
-                        ButtonVariant.LUMO_PRIMARY
+                        ButtonVariant.MATERIAL_CONTAINED
                     )
 
                     addClickShortcut(Key.ENTER)
