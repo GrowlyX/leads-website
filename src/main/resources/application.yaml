@@ -1,6 +1,9 @@
 server:
   port: 8080
 
+password:
+  test: "Gz5*jqD^p/X[j23R(-%n7,,+$d;8kU"
+
 project:
   name: leads-website
   version: 1.0
