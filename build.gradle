@@ -46,6 +46,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	implementation "com.github.mvysny.karibudsl:karibu-dsl:1.1.1"
+	implementation "com.github.Revxrsal:gotrue-kt:1.0"
 
 	implementation "io.github.reactivecircus.cache4k:cache4k:0.4.0"
 	implementation "com.github.devrawr:honey:9e2876f3ab"
