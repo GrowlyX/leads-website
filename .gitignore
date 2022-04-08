@@ -13,6 +13,7 @@ gradle.properties
 
 # Runtime
 runtime_prod.log
+*.gz
 
 # Maven
 log/

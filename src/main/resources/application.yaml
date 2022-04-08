@@ -7,11 +7,12 @@ project:
   description: something something something
 
 logging:
-  file: runtime_prod.log
   org.hibernate: INFO
+  file:
+    name: runtime_prod.log
 
 vaadin:
-  productionMode: true
+  productionMode: false
 
 spring:
   security:
