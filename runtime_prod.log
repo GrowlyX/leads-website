@@ -1,143 +1,20 @@
-2022-04-01 15:58:07.448  INFO 5620 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 5620 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 15:58:07.449  INFO 5620 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 15:58:07.495  WARN 5620 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 15:58:07.500  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 15:58:07.506  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 15:58:08.276  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2022-04-01 15:58:08.285  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 15:58:08.285  INFO 5620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 15:58:08.433  INFO 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 15:58:08.433  INFO 5620 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 927 ms
-2022-04-01 15:58:08.677  INFO 5620 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 50 ms
-2022-04-01 15:58:12.229  INFO 5620 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 3369 ms
-2022-04-01 15:58:12.273  INFO 5620 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 15:58:12.306 ERROR 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Exception sending context initialized event to listener instance of class [com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener]
-
-java.lang.RuntimeException: Unable to initialize com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$FailFastServletContextListener.contextInitialized(VaadinServletContextInitializer.java:191) ~[vaadin-spring-23.0.3.jar:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.lambda$contextInitialized$0(VaadinServletContextInitializer.java:213) ~[vaadin-spring-23.0.3.jar:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.contextInitialized(VaadinServletContextInitializer.java:213) ~[vaadin-spring-23.0.3.jar:na]
-	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4683) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5146) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
-	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-Caused by: java.lang.IllegalStateException: There can only be one @PWA annotation and it must be set on the AppShellConfigurator implementor.
-	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.discoverPwa(FullDependenciesScanner.java:502) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.<init>(FullDependenciesScanner.java:174) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.scanner.FullDependenciesScanner.<init>(FullDependenciesScanner.java:115) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:127) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:92) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.NodeTasks.<init>(NodeTasks.java:727) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.NodeTasks.<init>(NodeTasks.java:55) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.flow.server.frontend.NodeTasks$Builder.build(NodeTasks.java:236) ~[flow-server-23.0.3.jar:23.0.3]
-	at com.vaadin.base.devserver.startup.DevModeInitializer.initDevModeHandler(DevModeInitializer.java:341) ~[vaadin-dev-server-23.0.3.jar:na]
-	at com.vaadin.base.devserver.DevModeHandlerManagerImpl.initDevModeHandler(DevModeHandlerManagerImpl.java:80) ~[vaadin-dev-server-23.0.3.jar:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener.failFastContextInitialized(VaadinServletContextInitializer.java:474) ~[vaadin-spring-23.0.3.jar:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$FailFastServletContextListener.contextInitialized(VaadinServletContextInitializer.java:187) ~[vaadin-spring-23.0.3.jar:na]
-	... 47 common frames omitted
-
-2022-04-01 15:58:12.307 ERROR 5620 --- [restartedMain] o.apache.catalina.core.StandardContext   : One or more listeners failed to start. Full details will be found in the appropriate container log file
-2022-04-01 15:58:12.307 ERROR 5620 --- [restartedMain] o.apache.catalina.core.StandardContext   : Context [] startup failed due to previous errors
-2022-04-01 15:58:12.309 ERROR 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Exception sending context destroyed event to listener instance of class [com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener]
-
-java.lang.NullPointerException: null
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$DevModeServletContextListener.contextDestroyed(VaadinServletContextInitializer.java:491) ~[vaadin-spring-23.0.3.jar:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.lambda$contextDestroyed$1(VaadinServletContextInitializer.java:218) ~[vaadin-spring-23.0.3.jar:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at com.vaadin.flow.spring.VaadinServletContextInitializer$CompositeServletContextListener.contextDestroyed(VaadinServletContextInitializer.java:218) ~[vaadin-spring-23.0.3.jar:na]
-	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4730) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5396) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:187) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
-	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-
-2022-04-01 15:58:13.002  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-04-01 15:58:13.007  WARN 5620 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2022-04-01 15:58:13.012  INFO 5620 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-04-07 20:48:35.903  INFO 2720 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 2720 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
+2022-04-07 20:48:35.909  INFO 2720 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
+2022-04-07 20:48:35.984  INFO 2720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-07 20:48:35.984  INFO 2720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-07 20:48:36.010  WARN 2720 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-04-07 20:48:37.272  INFO 2720 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-07 20:48:37.278  INFO 2720 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-07 20:48:37.279  INFO 2720 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2022-04-07 20:48:37.395  INFO 2720 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-07 20:48:37.395  INFO 2720 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1410 ms
+2022-04-07 20:48:37.444 ERROR 2720 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'websiteSecurityFilter' defined in file [G:\Organizations\riverdell\leads-website\build\classes\kotlin\main\org\riverdell\website\security\WebsiteSecurityFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'websiteSecurityClient' defined in file [G:\Organizations\riverdell\leads-website\build\classes\kotlin\main\org\riverdell\website\security\WebsiteSecurityClient.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.riverdell.website.security.WebsiteSecurityClient$$EnhancerBySpringCGLIB$$4406c235]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+2022-04-07 20:48:37.464  INFO 2720 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-07 20:48:37.471  WARN 2720 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-07 20:48:37.479  INFO 2720 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-01 15:58:13.019 ERROR 5620 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2022-04-07 20:48:37.495 ERROR 2720 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
@@ -148,7 +25,7 @@ org.springframework.context.ApplicationContextException: Unable to start web ser
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:19) ~[main/:na]
+	at org.riverdell.website.WebsiteApp$Companion.main(WebsiteApp.kt:30) ~[main/:na]
 	at org.riverdell.website.WebsiteApp.main(WebsiteApp.kt) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
@@ -163,606 +40,82 @@ Caused by: org.springframework.boot.web.server.WebServerException: Unable to sta
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	... 14 common frames omitted
-Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[] failed to start
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:171) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:110) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websiteSecurityFilter' defined in file [G:\Organizations\riverdell\leads-website\build\classes\kotlin\main\org\riverdell\website\security\WebsiteSecurityFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'websiteSecurityClient' defined in file [G:\Organizations\riverdell\leads-website\build\classes\kotlin\main\org\riverdell\website\security\WebsiteSecurityClient.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.riverdell.website.security.WebsiteSecurityClient$$EnhancerBySpringCGLIB$$4406c235]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'websiteSecurityClient' defined in file [G:\Organizations\riverdell\leads-website\build\classes\kotlin\main\org\riverdell\website\security\WebsiteSecurityClient.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.riverdell.website.security.WebsiteSecurityClient$$EnhancerBySpringCGLIB$$4406c235]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 60 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.riverdell.website.security.WebsiteSecurityClient$$EnhancerBySpringCGLIB$$4406c235]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 72 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at org.riverdell.website.security.WebsiteSecurityClient.<init>(WebsiteSecurityClient.kt:16) ~[main/:na]
+	at org.riverdell.website.security.WebsiteSecurityClient$$EnhancerBySpringCGLIB$$4406c235.<init>(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 74 common frames omitted
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246) ~[na:na]
+	at java.base/java.util.Properties.load(Properties.java:406) ~[na:na]
+	at org.riverdell.website.WebsiteConfig.<clinit>(WebsiteConfig.kt:20) ~[main/:na]
+	... 81 common frames omitted
 
-2022-04-01 15:59:05.104  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 27368 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 15:59:05.105  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 15:59:05.150  WARN 27368 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 15:59:05.161  INFO 27368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 15:59:05.162  INFO 27368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 15:59:05.871  INFO 27368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2022-04-01 15:59:05.879  INFO 27368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 15:59:05.879  INFO 27368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 15:59:05.969  INFO 27368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 15:59:05.969  INFO 27368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 807 ms
-2022-04-01 15:59:06.110  INFO 27368 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 20 ms
-2022-04-01 15:59:08.831  INFO 27368 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2663 ms
-2022-04-01 15:59:08.874  INFO 27368 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 15:59:08.906  INFO 27368 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 22 ms.
-2022-04-01 15:59:08.970  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Running `pnpm install` to resolve and optionally download frontend dependencies. This may take a moment, please stand by...
-2022-04-01 15:59:09.046  INFO 27368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 15:59:09.328  INFO 27368 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 15:59:09.363  INFO 27368 --- [cluster-ClusterId{value='6247598dd7dd7a09c636d834', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
-2022-04-01 15:59:09.367  INFO 27368 --- [cluster-ClusterId{value='6247598dd7dd7a09c636d834', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2665300}
-2022-04-01 15:59:09.377  INFO 27368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 15:59:09.400  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 15:59:09.401  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 15:59:09.419  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 15:59:09.423  INFO 27368 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 15:59:09.426  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 15:59:09.431  INFO 27368 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 15:59:09.439  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 15:59:09.440  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 15:59:09.441  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 15:59:09.442  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 15:59:09.443  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 15:59:09.446  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 15:59:09.447  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 15:59:09.448  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 15:59:09.453  INFO 27368 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 15:59:09.490  INFO 27368 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 15:59:09.521  INFO 27368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2022-04-01 15:59:09.524  INFO 27368 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 4.758 seconds (JVM running for 6.762)
-2022-04-01 15:59:11.622  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 15:59:12.513  INFO 27368 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : using 'C:\Users\satis\.vaadin\node\node.exe C:\Users\satis\.vaadin\node\node_modules\npm\bin\npx-cli.js --yes --quiet pnpm@5.18.10 --shamefully-hoist=true --ignore-scripts install' for frontend package installation
-2022-04-01 15:59:22.829  INFO 27368 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 15:59:33.977  INFO 21616 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 21616 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 15:59:33.978  INFO 21616 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 15:59:34.009  WARN 21616 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 15:59:34.015  INFO 21616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 15:59:34.015  INFO 21616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 15:59:34.813  INFO 21616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 15:59:34.820  INFO 21616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 15:59:34.820  INFO 21616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 15:59:34.909  INFO 21616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 15:59:34.909  INFO 21616 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 894 ms
-2022-04-01 15:59:35.116  INFO 21616 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 24 ms
-2022-04-01 15:59:38.029  INFO 21616 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2844 ms
-2022-04-01 15:59:38.068  INFO 21616 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 15:59:38.096  INFO 21616 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 17 ms.
-2022-04-01 15:59:38.159  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Running `pnpm install` to resolve and optionally download frontend dependencies. This may take a moment, please stand by...
-2022-04-01 15:59:38.239  INFO 21616 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 15:59:38.545  INFO 21616 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 15:59:38.586  INFO 21616 --- [cluster-ClusterId{value='624759aaf18a433f47f2c4b7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
-2022-04-01 15:59:38.589  INFO 21616 --- [cluster-ClusterId{value='624759aaf18a433f47f2c4b7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2209600}
-2022-04-01 15:59:38.597  INFO 21616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 15:59:38.619  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 15:59:38.619  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 15:59:38.633  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 15:59:38.637  INFO 21616 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 15:59:38.639  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 15:59:38.643  INFO 21616 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 15:59:38.652  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 15:59:38.652  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 15:59:38.653  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 15:59:38.653  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 15:59:38.654  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 15:59:38.654  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 15:59:38.654  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 15:59:38.654  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 15:59:38.655  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 15:59:38.655  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 15:59:38.656  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 15:59:38.657  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 15:59:38.657  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 15:59:38.657  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 15:59:38.660  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 15:59:38.661  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 15:59:38.662  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 15:59:38.663  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 15:59:38.663  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 15:59:38.663  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 15:59:38.663  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 15:59:38.663  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 15:59:38.665  INFO 21616 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 15:59:38.709  INFO 21616 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 15:59:38.741  INFO 21616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 15:59:38.744  INFO 21616 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 5.154 seconds (JVM running for 6.808)
-2022-04-01 15:59:39.935  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 15:59:40.687  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : using 'C:\Users\satis\.vaadin\node\node.exe C:\Users\satis\.vaadin\node\node_modules\npm\bin\npx-cli.js --yes --quiet pnpm@5.18.10 --shamefully-hoist=true --ignore-scripts install' for frontend package installation
-2022-04-01 15:59:59.527  INFO 21616 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 15:59:59.528  INFO 21616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 15:59:59.542  INFO 21616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
-2022-04-01 16:00:02.050  WARN 21616 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,458] milliseconds.
-2022-04-01 16:00:02.062  INFO 21616 --- [http-nio-8080-exec-1] c.vaadin.flow.spring.SpringInstantiator  : The number of beans implementing 'I18NProvider' is 0. Cannot use Spring beans for I18N, falling back to the default behavior
-2022-04-01 16:00:31.725  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Frontend dependencies resolved successfully.
-2022-04-01 16:00:37.737  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:00:37.764  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 27 ms.
-2022-04-01 16:00:37.827  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:00:38.068  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:00:39.391  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:00:47.068  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:00:47.068  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:54745/
-2022-04-01 16:00:47.069  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:54745/
-2022-04-01 16:00:47.069  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:00:55.294  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:00:55.297  INFO 21616 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 17470ms
-2022-04-01 16:00:55.423  INFO 21616 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:02:53.027  INFO 21616 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:03:01.115  INFO 28048 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 28048 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 16:03:01.116  INFO 28048 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 16:03:01.148  WARN 28048 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 16:03:01.175  INFO 28048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 16:03:01.175  INFO 28048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 16:03:02.061  INFO 28048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 16:03:02.068  INFO 28048 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 16:03:02.068  INFO 28048 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 16:03:02.175  INFO 28048 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 16:03:02.175  INFO 28048 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 999 ms
-2022-04-01 16:03:02.313  INFO 28048 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 25 ms
-2022-04-01 16:03:05.095  INFO 28048 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2718 ms
-2022-04-01 16:03:05.145  INFO 28048 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 16:03:05.181  INFO 28048 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 24 ms.
-2022-04-01 16:03:05.252  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Skipping `pnpm install` because the frontend packages are already installed in the folder 'G:\Organizations\riverdell\leads-website\node_modules' and the hash in the file 'G:\Organizations\riverdell\leads-website\node_modules\.vaadin\vaadin.json' is the same as in 'package.json'
-2022-04-01 16:03:05.252  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:03:05.272  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 20 ms.
-2022-04-01 16:03:05.333  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:03:05.388  INFO 28048 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:03:05.563  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:03:05.675  INFO 28048 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 16:03:05.719  INFO 28048 --- [cluster-ClusterId{value='62475a7910b6ca65d18f6da5', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
-2022-04-01 16:03:05.724  INFO 28048 --- [cluster-ClusterId{value='62475a7910b6ca65d18f6da5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2831200}
-2022-04-01 16:03:05.734  INFO 28048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 16:03:05.762  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 16:03:05.763  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 16:03:05.781  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 16:03:05.785  INFO 28048 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 16:03:05.788  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 16:03:05.793  INFO 28048 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 16:03:05.802  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 16:03:05.803  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 16:03:05.803  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 16:03:05.804  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 16:03:05.804  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 16:03:05.805  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 16:03:05.805  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 16:03:05.805  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 16:03:05.806  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 16:03:05.806  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 16:03:05.807  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 16:03:05.807  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 16:03:05.807  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 16:03:05.807  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 16:03:05.810  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.811  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.811  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.811  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 16:03:05.812  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 16:03:05.813  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 16:03:05.814  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 16:03:05.814  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 16:03:05.814  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 16:03:05.814  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 16:03:05.814  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 16:03:05.819  INFO 28048 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 16:03:05.860  INFO 28048 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 16:03:05.890  INFO 28048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 16:03:05.893  INFO 28048 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 5.246 seconds (JVM running for 7.026)
-2022-04-01 16:03:05.946  INFO 28048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 16:03:05.946  INFO 28048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 16:03:05.954  INFO 28048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2022-04-01 16:03:07.138  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:03:12.591  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:03:12.591  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:60533/
-2022-04-01 16:03:12.591  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:60533/
-2022-04-01 16:03:12.592  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:03:17.097  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:03:17.101  INFO 28048 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 11768ms
-2022-04-01 16:03:17.152  INFO 28048 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:12:34.203  INFO 28048 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:12:42.331  INFO 13052 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 13052 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 16:12:42.332  INFO 13052 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 16:12:42.367  WARN 13052 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 16:12:42.376  INFO 13052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 16:12:42.376  INFO 13052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 16:12:43.068  INFO 13052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 16:12:43.075  INFO 13052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 16:12:43.075  INFO 13052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 16:12:43.189  INFO 13052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 16:12:43.189  INFO 13052 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 813 ms
-2022-04-01 16:12:43.326  INFO 13052 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 20 ms
-2022-04-01 16:12:46.185  INFO 13052 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2799 ms
-2022-04-01 16:12:46.246  INFO 13052 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 16:12:46.289  INFO 13052 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 27 ms.
-2022-04-01 16:12:46.374  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Skipping `pnpm install` because the frontend packages are already installed in the folder 'G:\Organizations\riverdell\leads-website\node_modules' and the hash in the file 'G:\Organizations\riverdell\leads-website\node_modules\.vaadin\vaadin.json' is the same as in 'package.json'
-2022-04-01 16:12:46.375  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:12:46.416  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 40 ms.
-2022-04-01 16:12:46.483  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:12:46.539  INFO 13052 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:12:46.716  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:12:46.832  INFO 13052 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 16:12:46.870  INFO 13052 --- [cluster-ClusterId{value='62475cbebd878751ef5c1cc3', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
-2022-04-01 16:12:46.874  INFO 13052 --- [cluster-ClusterId{value='62475cbebd878751ef5c1cc3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2600700}
-2022-04-01 16:12:46.885  INFO 13052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 16:12:46.912  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 16:12:46.912  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 16:12:46.932  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 16:12:46.936  INFO 13052 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 16:12:46.938  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 16:12:46.944  INFO 13052 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 16:12:46.953  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 16:12:46.953  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 16:12:46.953  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 16:12:46.953  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 16:12:46.954  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 16:12:46.954  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 16:12:46.954  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 16:12:46.954  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 16:12:46.955  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 16:12:46.956  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 16:12:46.956  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 16:12:46.956  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 16:12:46.956  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 16:12:46.957  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 16:12:46.961  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.961  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.961  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.961  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 16:12:46.962  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 16:12:46.963  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 16:12:46.964  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 16:12:46.964  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 16:12:46.964  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 16:12:46.964  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 16:12:46.964  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 16:12:46.967  INFO 13052 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 16:12:47.007  INFO 13052 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 16:12:47.036  INFO 13052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 16:12:47.040  INFO 13052 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 5.049 seconds (JVM running for 6.497)
-2022-04-01 16:12:48.299  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:12:53.072  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:12:53.073  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:52919/
-2022-04-01 16:12:53.073  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:52919/
-2022-04-01 16:12:53.073  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:12:57.829  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:12:57.833  INFO 13052 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 11350ms
-2022-04-01 16:12:57.988  INFO 13052 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:13:15.258  INFO 13052 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:13:22.775  INFO 14776 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 14776 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 16:13:22.776  INFO 14776 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 16:13:22.804  WARN 14776 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 16:13:22.822  INFO 14776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 16:13:22.822  INFO 14776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 16:13:23.599  INFO 14776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 16:13:23.606  INFO 14776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 16:13:23.606  INFO 14776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 16:13:23.705  INFO 14776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 16:13:23.705  INFO 14776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 883 ms
-2022-04-01 16:13:23.859  INFO 14776 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 21 ms
-2022-04-01 16:13:27.379  INFO 14776 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 3456 ms
-2022-04-01 16:13:27.449  INFO 14776 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 16:13:27.502  INFO 14776 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 37 ms.
-2022-04-01 16:13:27.590  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Skipping `pnpm install` because the frontend packages are already installed in the folder 'G:\Organizations\riverdell\leads-website\node_modules' and the hash in the file 'G:\Organizations\riverdell\leads-website\node_modules\.vaadin\vaadin.json' is the same as in 'package.json'
-2022-04-01 16:13:27.590  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:13:27.618  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 27 ms.
-2022-04-01 16:13:27.704  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:13:27.783  INFO 14776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:13:28.011  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:13:28.155  INFO 14776 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 16:13:28.209  INFO 14776 --- [cluster-ClusterId{value='62475ce83ee3127d150d215e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
-2022-04-01 16:13:28.214  INFO 14776 --- [cluster-ClusterId{value='62475ce83ee3127d150d215e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3569200}
-2022-04-01 16:13:28.232  INFO 14776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 16:13:28.272  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 16:13:28.272  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 16:13:28.300  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 16:13:28.306  INFO 14776 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 16:13:28.310  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 16:13:28.316  INFO 14776 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 16:13:28.336  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 16:13:28.337  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 16:13:28.338  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 16:13:28.338  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 16:13:28.339  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 16:13:28.339  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 16:13:28.340  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 16:13:28.343  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 16:13:28.344  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 16:13:28.345  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 16:13:28.345  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 16:13:28.345  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 16:13:28.345  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 16:13:28.346  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 16:13:28.355  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.356  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.356  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.356  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 16:13:28.357  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 16:13:28.358  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 16:13:28.360  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 16:13:28.360  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 16:13:28.360  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 16:13:28.361  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 16:13:28.361  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 16:13:28.366  INFO 14776 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 16:13:28.429  INFO 14776 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 16:13:28.477  INFO 14776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 16:13:28.480  INFO 14776 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 6.083 seconds (JVM running for 7.764)
-2022-04-01 16:13:29.512  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:13:30.689  INFO 14776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 16:13:30.689  INFO 14776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 16:13:30.696  INFO 14776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2022-04-01 16:13:36.216  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:13:36.216  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:53000/
-2022-04-01 16:13:36.216  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:53000/
-2022-04-01 16:13:36.216  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:13:43.878  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:13:43.881  INFO 14776 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 16176ms
-2022-04-01 16:13:43.973  INFO 14776 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:15:21.255  INFO 14776 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:15:29.380  INFO 15552 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 15552 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 16:15:29.381  INFO 15552 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 16:15:29.423  WARN 15552 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 16:15:29.449  INFO 15552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 16:15:29.450  INFO 15552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 16:15:30.221  INFO 15552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 16:15:30.231  INFO 15552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 16:15:30.231  INFO 15552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 16:15:30.333  INFO 15552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 16:15:30.334  INFO 15552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 883 ms
-2022-04-01 16:15:30.547  INFO 15552 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 23 ms
-2022-04-01 16:15:33.752  INFO 15552 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 3124 ms
-2022-04-01 16:15:33.824  INFO 15552 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 16:15:33.864  INFO 15552 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 27 ms.
-2022-04-01 16:15:33.931  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Skipping `pnpm install` because the frontend packages are already installed in the folder 'G:\Organizations\riverdell\leads-website\node_modules' and the hash in the file 'G:\Organizations\riverdell\leads-website\node_modules\.vaadin\vaadin.json' is the same as in 'package.json'
-2022-04-01 16:15:33.931  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:15:33.953  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 21 ms.
-2022-04-01 16:15:34.017  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:15:34.079  INFO 15552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:15:34.293  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:15:34.425  INFO 15552 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 16:15:34.488  INFO 15552 --- [cluster-ClusterId{value='62475d66b6e6a6251e46ceac', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
-2022-04-01 16:15:34.493  INFO 15552 --- [cluster-ClusterId{value='62475d66b6e6a6251e46ceac', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2728300}
-2022-04-01 16:15:34.518  INFO 15552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 16:15:34.554  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 16:15:34.554  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 16:15:34.579  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 16:15:34.585  INFO 15552 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 16:15:34.588  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 16:15:34.596  INFO 15552 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 16:15:34.607  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 16:15:34.607  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 16:15:34.608  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 16:15:34.608  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 16:15:34.608  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 16:15:34.608  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 16:15:34.609  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 16:15:34.609  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 16:15:34.610  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 16:15:34.611  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 16:15:34.611  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 16:15:34.611  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 16:15:34.611  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 16:15:34.611  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 16:15:34.619  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.621  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.621  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.621  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.622  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.624  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.624  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.624  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 16:15:34.624  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 16:15:34.625  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 16:15:34.626  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 16:15:34.626  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 16:15:34.626  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 16:15:34.626  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 16:15:34.628  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 16:15:34.628  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 16:15:34.628  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 16:15:34.628  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 16:15:34.628  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 16:15:34.632  INFO 15552 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 16:15:34.679  INFO 15552 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 16:15:34.716  INFO 15552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 16:15:34.719  INFO 15552 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 5.716 seconds (JVM running for 7.409)
-2022-04-01 16:15:34.810  INFO 15552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 16:15:34.810  INFO 15552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 16:15:34.816  INFO 15552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-04-01 16:15:36.317  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:15:43.226  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:15:43.226  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:53192/
-2022-04-01 16:15:43.227  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:53192/
-2022-04-01 16:15:43.227  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:15:49.428  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:15:49.432  INFO 15552 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 15415ms
-2022-04-01 16:15:49.590  INFO 15552 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:20:07.831  INFO 15552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:20:16.415  INFO 15964 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Starting WebsiteApp.Companion on WorkstationElite with PID 15964 (G:\Organizations\riverdell\leads-website\build\classes\kotlin\main started by Subham Kumar in G:\Organizations\riverdell\leads-website)
-2022-04-01 16:20:16.416  INFO 15964 --- [restartedMain] o.r.website.WebsiteApp$Companion         : No active profile set, falling back to default profiles: default
-2022-04-01 16:20:16.453  WARN 15964 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-04-01 16:20:16.472  INFO 15964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-01 16:20:16.472  INFO 15964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-01 16:20:17.249  INFO 15964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-01 16:20:17.256  INFO 15964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 16:20:17.256  INFO 15964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2022-04-01 16:20:17.361  INFO 15964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 16:20:17.362  INFO 15964 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 890 ms
-2022-04-01 16:20:17.498  INFO 15964 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for VaadinAppShell took 23 ms
-2022-04-01 16:20:20.426  INFO 15964 --- [restartedMain] c.v.f.s.VaadinServletContextInitializer  : Search for subclasses and classes with annotations took 2866 ms
-2022-04-01 16:20:20.477  INFO 15964 --- [restartedMain] c.v.b.d.startup.DevModeStartupListener   : Starting dev-mode updaters in G:\Organizations\riverdell\leads-website folder.
-2022-04-01 16:20:20.508  INFO 15964 --- [restartedMain] c.v.f.s.f.s.FullDependenciesScanner      : Visited 104 classes. Took 19 ms.
-2022-04-01 16:20:20.573  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskUpdatePackages      : Skipping `pnpm install` because the frontend packages are already installed in the folder 'G:\Organizations\riverdell\leads-website\node_modules' and the hash in the file 'G:\Organizations\riverdell\leads-website\node_modules\.vaadin\vaadin.json' is the same as in 'package.json'
-2022-04-01 16:20:20.573  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Copying frontend resources from jar files ...
-2022-04-01 16:20:20.595  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.f.s.frontend.TaskCopyFrontendFiles   : Visited 16 resources. Took 22 ms.
-2022-04-01 16:20:20.663  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Starting Webpack
-2022-04-01 16:20:20.726  INFO 15964 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-01 16:20:20.913  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.flow.server.frontend.FrontendTools   : Globally node version 14.15.1 is older than 16.14.0. Using node from C:\Users\satis\.vaadin.
-2022-04-01 16:20:21.044  INFO 15964 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2022-04-01 16:20:21.106  INFO 15964 --- [cluster-ClusterId{value='62475e85fecf0702aeddc410', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
-2022-04-01 16:20:21.111  INFO 15964 --- [cluster-ClusterId{value='62475e85fecf0702aeddc410', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 1]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3973500}
-2022-04-01 16:20:21.131  INFO 15964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-01 16:20:21.164  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler mapped to context-path: /*
-2022-04-01 16:20:21.164  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.flow.server.communication.PushAtmosphereHandler
-2022-04-01 16:20:21.187  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
-2022-04-01 16:20:21.193  INFO 15964 --- [restartedMain] org.atmosphere.util.ForkJoinPool         : Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
-2022-04-01 16:20:21.197  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
-2022-04-01 16:20:21.204  INFO 15964 --- [restartedMain] o.a.container.JSR356AsyncSupport         : JSR 356 Mapping path /vaadinServlet
-2022-04-01 16:20:21.215  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installing Default AtmosphereInterceptors
-2022-04-01 16:20:21.215  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
-2022-04-01 16:20:21.216  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
-2022-04-01 16:20:21.216  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
-2022-04-01 16:20:21.217  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
-2022-04-01 16:20:21.217  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Dropping Interceptor org.atmosphere.interceptor.HeartbeatInterceptor
-2022-04-01 16:20:21.217  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
-2022-04-01 16:20:21.218  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
-2022-04-01 16:20:21.219  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
-2022-04-01 16:20:21.220  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
-2022-04-01 16:20:21.220  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
-2022-04-01 16:20:21.220  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
-2022-04-01 16:20:21.220  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
-2022-04-01 16:20:21.221  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
-2022-04-01 16:20:21.224  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.225  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Shared List Resources: false
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Broadcaster Polling Wait Time 100
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Shared ExecutorService supported: true
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Async I/O Thread Pool Size: 200
-2022-04-01 16:20:21.226  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
-2022-04-01 16:20:21.227  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
-2022-04-01 16:20:21.227  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
-2022-04-01 16:20:21.228  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Invoke AtmosphereInterceptor on WebSocket message true
-2022-04-01 16:20:21.228  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : HttpSession supported: true
-2022-04-01 16:20:21.229  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
-2022-04-01 16:20:21.229  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Apache Tomcat/9.0.30 using javax.servlet/3.0 and jsr356/WebSocket API
-2022-04-01 16:20:21.229  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Atmosphere Framework 2.7.3.slf4jvaadin4 started.
-2022-04-01 16:20:21.234  INFO 15964 --- [restartedMain] org.atmosphere.cpr.AtmosphereFramework   : Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
-2022-04-01 16:20:21.271  INFO 15964 --- [restartedMain] c.v.f.s.DefaultDeploymentConfiguration   : 
-Vaadin is running in DEBUG MODE.
-When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
-2022-04-01 16:20:21.303  INFO 15964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-01 16:20:21.306  INFO 15964 --- [restartedMain] o.r.website.WebsiteApp$Companion         : Started WebsiteApp.Companion in 5.297 seconds (JVM running for 7.073)
-2022-04-01 16:20:22.366  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Running Webpack to compile frontend resources. This may take a moment, please stand by...
-2022-04-01 16:20:28.350  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Project is running at:
-2022-04-01 16:20:28.350  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Loopback: http://localhost:56454/
-2022-04-01 16:20:28.350  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] On Your Network (IPv4): http://192.168.1.216:56454/
-2022-04-01 16:20:28.351  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [webpack-dev-server] Content not from webpack is served from 'G:\Organizations\riverdell\leads-website\build\classes\META-INF\VAADIN\webapp, G:\Organizations\riverdell\leads-website\src\main\webapp' directory
-2022-04-01 16:20:30.777  INFO 15964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 16:20:30.778  INFO 15964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 16:20:30.783  INFO 15964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-04-01 16:20:32.465  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : [build-status] : Compiled.
-2022-04-01 16:20:32.469  INFO 15964 --- [ForkJoinPool.commonPool-worker-3] c.v.b.devserver.AbstractDevServerRunner  : Started Webpack. Time: 11806ms
-2022-04-01 16:20:32.550  INFO 15964 --- [dev-server-output] c.v.b.devserver.DevServerOutputTracker   : No issues found.
-2022-04-01 16:32:08.191  INFO 15964 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

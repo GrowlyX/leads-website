@@ -41,12 +41,15 @@ dependencies {
 
 	implementation "com.vaadin:vaadin-spring-boot-starter"
 
+	implementation "com.squareup.moshi:moshi:1.13.0"
+	implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.6"
+
 	implementation "org.springframework.boot:spring-boot-devtools"
 	implementation "org.springframework.boot:spring-boot-starter-tomcat"
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
 	implementation "com.github.mvysny.karibudsl:karibu-dsl:1.1.1"
-	implementation "com.github.Revxrsal:gotrue-kt:1.0"
 
 	implementation "io.github.reactivecircus.cache4k:cache4k:0.4.0"
 	implementation "com.github.devrawr:honey:9e2876f3ab"

@@ -1,11 +1,6 @@
 server:
   port: 8080
 
-supabase:
-  password: "Gz5*jqD^p/X[j23R(-%n7,,+$d;8kU"
-  authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhdXF6dGhoam1jcnFkb3R1YXdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDg5MjAwMjMsImV4cCI6MTk2NDQ5NjAyM30._i6fqRv-FQb9gu7p6YPHJk7YQ8s3_wwQXW3UMhZflJ0"
-  project-id: "xauqzthhjmcrqdotuawc"
-
 project:
   name: leads-website
   version: 1.0
@@ -17,3 +12,12 @@ logging:
 
 vaadin:
   productionMode: true
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ""
+            clientSecret: ""
