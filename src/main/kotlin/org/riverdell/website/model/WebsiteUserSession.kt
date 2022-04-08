@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture
  */
 @Component
 @SessionScope
-class WebsiteUserSession
+open class WebsiteUserSession
 {
     fun getUser(): CompletableFuture<WebsiteUser>
     {
@@ -35,8 +35,11 @@ class WebsiteUserSession
                 .getAttribute("given_name")
             ?: "New User"
 
+        val picture = principal
+            .getAttribute<String>("picture")!!
+
         return WebsiteUserRepository
-            .getOrCreate(email, name)
+            .getOrCreate(email, name, picture)
 
     }
 

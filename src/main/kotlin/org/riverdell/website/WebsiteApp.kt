@@ -12,12 +12,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * @since 3/30/2022
  */
 @Theme(
-    value = "stolen-cobalt",
+    themeClass = Lumo::class,
     variant = Lumo.DARK
-)
-@NpmPackage(
-    value = "line-awesome",
-    version = "1.3.0"
 )
 @SpringBootApplication
 open class WebsiteApp : SpringBootServletInitializer()

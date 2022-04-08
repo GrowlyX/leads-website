@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.scheduling.annotation.EnableAsync
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
 
-
 /**
  * @author GrowlyX
  * @since 4/7/2022
@@ -18,8 +17,9 @@ open class ExecutorConfiguration
         val executor = ThreadPoolTaskExecutor()
         executor.corePoolSize = 3
         executor.maxPoolSize = 3
-        executor.setQueueCapacity(100)
         executor.threadNamePrefix = "req-thread-"
+
+        executor.setQueueCapacity(100)
         executor.initialize()
     }
 

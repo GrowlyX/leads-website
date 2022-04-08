@@ -9,5 +9,6 @@ import java.util.UUID
 class WebsiteUser(
     val uniqueId: UUID,
     val email: String,
-    val username: String
+    val username: String,
+    val picture: String
 )

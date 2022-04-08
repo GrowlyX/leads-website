@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture
  */
 object WebsiteUserRepository
 {
-    val repository = DataHandler
+    private val repository = DataHandler
         .linkTypeToId<WebsiteUser>("email")
         .withConnectionPool<NoAuthMongoConnectionPool> {
             this.databaseName = "website"
@@ -24,7 +24,7 @@ object WebsiteUserRepository
         )
 
     fun getOrCreate(
-        email: String, firstName: String
+        email: String, firstName: String, picture: String
     ): CompletableFuture<WebsiteUser>
     {
         return repository.retrieveAsync(email)
@@ -33,7 +33,7 @@ object WebsiteUserRepository
                 {
                     val user = WebsiteUser(
                         UUID.randomUUID(),
-                        email, firstName
+                        email, firstName, picture
                     )
 
                     this.repository.store(

@@ -2,13 +2,18 @@ package org.riverdell.website.views
 
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.button
-import com.github.mvysny.karibudsl.v10.horizontalLayout
 import com.github.mvysny.karibudsl.v10.onLeftClick
-import com.vaadin.flow.component.Key
-import com.vaadin.flow.component.button.ButtonVariant
+import com.github.mvysny.karibudsl.v10.verticalLayout
+import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.dependency.CssImport
-import com.vaadin.flow.component.notification.Notification
+import com.vaadin.flow.component.html.Div
+import com.vaadin.flow.component.html.Image
+import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.router.Route
+import com.vaadin.flow.server.VaadinServletRequest
+import org.riverdell.website.model.WebsiteUserSession
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
+import javax.annotation.security.PermitAll
 
 /**
  * @author GrowlyX
@@ -20,23 +25,44 @@ import com.vaadin.flow.router.Route
     value = "./styles/vaadin-text-field-styles.css",
     themeFor = "vaadin-text-field"
 )
-class PrimaryView : KComposite()
+@PermitAll
+class PrimaryView(
+    private val userSession: WebsiteUserSession
+) : KComposite()
 {
     init
     {
         ui {
-            horizontalLayout {
-                button("Say hellooo") {
+            verticalLayout {
+                val user = userSession
+                    .getUser().join()
+
+                val div = Div()
+                div.text = "Hey ${user.username}! "
+                div.element.style.set(
+                    "font-size", "xx-large"
+                )
+
+                val image = Image(
+                    user.picture, "Profile Picture"
+                )
+
+                val button = button("Logout") {
                     onLeftClick {
-                        Notification.show("hiii")
+                        UI.getCurrent().page.setLocation("/login")
+
+                        val logoutHandler = SecurityContextLogoutHandler()
+                        logoutHandler.logout(
+                            VaadinServletRequest.getCurrent().httpServletRequest,
+                            null, null
+                        )
                     }
-
-                    addThemeVariants(
-                        ButtonVariant.MATERIAL_CONTAINED
-                    )
-
-                    addClickShortcut(Key.ENTER)
                 }
+
+                alignItems = FlexComponent
+                    .Alignment.CENTER
+
+                add(div, image, button)
             }
         }
     }
