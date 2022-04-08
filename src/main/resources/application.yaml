@@ -13,6 +13,7 @@ logging:
 
 vaadin:
   productionMode: false
+  async-supported: true
 
 spring:
   security:
@@ -22,3 +23,8 @@ spring:
           google:
             clientId: "51527637151-ve222nql8vd8t5biedb4ermm42de95bd.apps.googleusercontent.com"
             clientSecret: "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"
+          github:
+            clientId: "0afc9bf38b0dac9cd8f7"
+            clientSecret: "e4a38218ccb49f50b1647cc7b67c671787fd50ec"
+            scope:
+              - "user"
