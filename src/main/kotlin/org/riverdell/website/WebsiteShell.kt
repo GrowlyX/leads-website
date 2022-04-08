@@ -5,6 +5,8 @@ import com.vaadin.flow.component.page.Meta
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.server.AppShellSettings
 import com.vaadin.flow.server.PWA
+import com.vaadin.flow.theme.Theme
+import com.vaadin.flow.theme.lumo.Lumo
 import org.riverdell.website.WebsiteShell.META_TITLE
 import org.riverdell.website.WebsiteShell.NAME
 import org.riverdell.website.WebsiteShell.NAME_SHORT
@@ -14,7 +16,12 @@ import org.riverdell.website.WebsiteShell.NAME_SHORT
  * @since 3/30/2022
  */
 @PWA(
-    name = NAME, shortName = NAME_SHORT
+    name = NAME,
+    shortName = NAME_SHORT
+)
+@Theme(
+    themeClass = Lumo::class,
+    variant = Lumo.DARK
 )
 @PageTitle(META_TITLE)
 object WebsiteShell : AppShellConfigurator

@@ -34,35 +34,36 @@ class PrimaryView(
     {
         ui {
             verticalLayout {
-                val user = userSession
-                    .getUser().join()
-
-                val div = Div()
-                div.text = "Hey ${user.username}! "
-                div.element.style.set(
-                    "font-size", "xx-large"
-                )
-
-                val image = Image(
-                    user.picture, "Profile Picture"
-                )
-
-                val button = button("Logout") {
-                    onLeftClick {
-                        UI.getCurrent().page.setLocation("/login")
-
-                        val logoutHandler = SecurityContextLogoutHandler()
-                        logoutHandler.logout(
-                            VaadinServletRequest.getCurrent().httpServletRequest,
-                            null, null
+                userSession
+                    .getUser()
+                    .thenAccept { user ->
+                        val div = Div()
+                        div.text = "Hey ${user.username}! "
+                        div.element.style.set(
+                            "font-size", "xx-large"
                         )
+
+                        val image = Image(
+                            user.picture, "Profile Picture"
+                        )
+
+                        val button = button("Logout") {
+                            onLeftClick {
+                                UI.getCurrent().page.setLocation("/login")
+
+                                val logoutHandler = SecurityContextLogoutHandler()
+                                logoutHandler.logout(
+                                    VaadinServletRequest.getCurrent().httpServletRequest,
+                                    null, null
+                                )
+                            }
+                        }
+
+                        alignItems = FlexComponent
+                            .Alignment.CENTER
+
+                        add(div, image, button)
                     }
-                }
-
-                alignItems = FlexComponent
-                    .Alignment.CENTER
-
-                add(div, image, button)
             }
         }
     }
