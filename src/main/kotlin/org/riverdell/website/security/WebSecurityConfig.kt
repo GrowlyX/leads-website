@@ -21,7 +21,7 @@ open class WebSecurityConfig : VaadinWebSecurityConfigurerAdapter()
         super.configure(http)
 
         http.oauth2Login()
-            .loginPage("/login")
+            .loginPage("/")
             .permitAll()
     }
 }
