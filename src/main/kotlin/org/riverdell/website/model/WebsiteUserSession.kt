@@ -35,7 +35,10 @@ open class WebsiteUserSession
             ?: "New User"
 
         val picture = principal
-            .getAttribute<String>("picture")!!
+            .getAttribute<String>("picture")
+            ?: "https://ui-avatars.com/api/?name=${
+                name.replace(" ", "+")
+            }"
 
         return WebsiteUserRepository
             .getOrCreate(email, name, picture)
