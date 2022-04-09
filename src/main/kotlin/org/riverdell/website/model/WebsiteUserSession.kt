@@ -39,7 +39,6 @@ open class WebsiteUserSession
 
         return WebsiteUserRepository
             .getOrCreate(email, name, picture)
-
     }
 
     fun loggedIn(): Boolean

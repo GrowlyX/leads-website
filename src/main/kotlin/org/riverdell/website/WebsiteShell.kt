@@ -1,5 +1,6 @@
 package org.riverdell.website
 
+import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.page.AppShellConfigurator
 import com.vaadin.flow.component.page.Meta
 import com.vaadin.flow.router.PageTitle
@@ -19,8 +20,12 @@ import org.riverdell.website.WebsiteShell.NAME_SHORT
     name = NAME,
     shortName = NAME_SHORT
 )
+@NpmPackage(
+    value = "line-awesome",
+    version = "1.3.0"
+)
 @Theme(
-    themeClass = Lumo::class,
+    value = "leads",
     variant = Lumo.DARK
 )
 @PageTitle(META_TITLE)
