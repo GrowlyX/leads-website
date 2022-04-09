@@ -43,8 +43,10 @@ open class WebsiteUserSession
 
     fun loggedIn(): Boolean
     {
-        return SecurityContextHolder
-            .getContext()
-            .authentication != null
+        val authentication = SecurityContextHolder
+            .getContext().authentication
+
+        return authentication != null &&
+                authentication.principal is OAuth2AuthenticatedPrincipal
     }
 }

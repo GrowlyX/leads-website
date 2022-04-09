@@ -34,7 +34,7 @@ spring:
             clientId: "0afc9bf38b0dac9cd8f7"
             clientSecret: "e4a38218ccb49f50b1647cc7b67c671787fd50ec"
             scope:
-              - "user"
+              - "user:email"
         provider:
           discord:
             authorizationUri: https://discordapp.com/api/oauth2/authorize
