@@ -14,10 +14,10 @@ enum class WebSecurityProvider(
         "/oauth2/authorization/google",
         "Google", "fa-brands fa-google"
     ),
-    GITHUB(
-        "/oauth2/authorization/github",
-        "GitHub", "fa-brands fa-github"
-    ),
+//    GITHUB(
+//        "/oauth2/authorization/github",
+//        "GitHub", "fa-brands fa-github"
+//    ),
 //    DISCORD(
 //        "/oauth2/authorization/discord",
 //        "Discord", "fa-brands fa-discord"
