@@ -18,8 +18,8 @@ enum class WebSecurityProvider(
         "/oauth2/authorization/github",
         "GitHub", "fa-brands fa-github"
     ),
-    DISCORD(
-        "/oauth2/authorization/discord",
-        "Discord", "fa-brands fa-discord"
-    )
+//    DISCORD(
+//        "/oauth2/authorization/discord",
+//        "Discord", "fa-brands fa-discord"
+//    )
 }

@@ -8,8 +8,6 @@ project:
 
 logging:
   org.hibernate: INFO
-  file:
-    name: runtime_prod.log
 
 vaadin:
   productionMode: false
@@ -23,12 +21,15 @@ spring:
           google:
             clientId: "51527637151-ve222nql8vd8t5biedb4ermm42de95bd.apps.googleusercontent.com"
             clientSecret: "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"
-          discord:
-            clientId: "962150567524831232"
-            clientSecret: "CtKl_ACq78BXp--cjA6ktGxNWGq1sv2a"
-            scope:
-              - "email"
-              - "identify"
+#          discord:
+#            clientId: "962150567524831232"
+#            clientSecret: "CtKl_ACq78BXp--cjA6ktGxNWGq1sv2a"
+#            clientAuthenticationMethod: post
+#            authorizationGrantType: authorization_code
+#            redirect-uri-template: "{baseUrl}/login/oauth2/code/discord"
+#            scope:
+#              - "email"
+#              - "identify"
           github:
             clientId: "0afc9bf38b0dac9cd8f7"
             clientSecret: "e4a38218ccb49f50b1647cc7b67c671787fd50ec"
