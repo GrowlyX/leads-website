@@ -2,6 +2,7 @@ package org.riverdell.website.frontend.views
 
 import com.github.mvysny.karibudsl.v10.*
 import com.vaadin.flow.component.UI
+import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.html.Paragraph
 import com.vaadin.flow.component.icon.VaadinIcon
@@ -53,6 +54,11 @@ class LoginView : KComposite()
                         }
 
                         this.icon = provider.icon.create()
+                        this.addThemeVariants(
+                            ButtonVariant.LUMO_PRIMARY,
+                            ButtonVariant.LUMO_SUCCESS
+                        )
+                        this.isAutofocus = true
                     }
 
                     this.add(button)
