@@ -2,17 +2,14 @@ package org.riverdell.website.frontend.views
 
 import com.github.mvysny.karibudsl.v10.*
 import com.vaadin.flow.component.UI
-import com.vaadin.flow.component.html.Anchor
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.html.Paragraph
-import com.vaadin.flow.component.icon.Icon
 import com.vaadin.flow.component.icon.VaadinIcon
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
-import org.riverdell.website.frontend.icon.FontAwesomeIcon
 import org.riverdell.website.security.WebSecurityProvider
 
 /**
@@ -55,8 +52,7 @@ class LoginView : KComposite()
                                 .setLocation(provider.uri)
                         }
 
-                        this.icon =
-                            FontAwesomeIcon(provider.icon)
+                        this.icon = provider.icon.create()
                     }
 
                     this.add(button)

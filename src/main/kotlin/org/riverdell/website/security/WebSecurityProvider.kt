@@ -1,5 +1,7 @@
 package org.riverdell.website.security
 
+import com.vaadin.flow.component.icon.VaadinIcon
+
 /**
  * @author GrowlyX
  * @since 4/7/2022
@@ -7,12 +9,12 @@ package org.riverdell.website.security
 enum class WebSecurityProvider(
     val uri: String,
     val identifier: String,
-    val icon: String
+    val icon: VaadinIcon
 )
 {
     GOOGLE(
         "/oauth2/authorization/google",
-        "Google", "fa-brands fa-google"
+        "Google", VaadinIcon.GOOGLE_PLUS
     ),
 //    GITHUB(
 //        "/oauth2/authorization/github",
