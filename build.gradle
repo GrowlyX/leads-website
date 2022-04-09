@@ -22,6 +22,10 @@ repositories {
 	maven {
 		url "https://jitpack.io"
 	}
+
+	maven {
+		url "https://maven.vaadin.com/vaadin-addons"
+	}
 }
 
 application {
@@ -46,6 +50,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
+	implementation 'com.flowingcode.addons:font-awesome-iron-iconset:3.0.0'
 	implementation "com.github.mvysny.karibudsl:karibu-dsl:1.1.1"
 
 	implementation "io.github.reactivecircus.cache4k:cache4k:0.4.0"
