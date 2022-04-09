@@ -116,6 +116,7 @@
       "@vaadin/virtual-list": "23.0.3",
       "construct-style-sheets-polyfill": "3.0.4",
       "date-fns": "2.23.0",
+      "font-awesome": "4.7.0",
       "line-awesome": "1.3.0",
       "lit": "2.1.4"
     },
@@ -141,7 +142,7 @@
       "workbox-precaching": "6.5.0",
       "workbox-webpack-plugin": "6.5.0"
     },
-    "hash": "959fab4ac22d118f1afb3443f8d2e4746e19f91864ed1c7f8ebb7734e8846b4c"
+    "hash": "2657cef3fe991c186e853aba7a629dccbcb07c19a02c75c0a362f53bed1234bc"
   },
   "dependencies": {
     "@polymer/iron-icon": "3.0.1",
@@ -258,6 +259,7 @@
     "@vaadin/virtual-list": "23.0.3",
     "construct-style-sheets-polyfill": "3.0.4",
     "date-fns": "2.23.0",
+    "font-awesome": "4.7.0",
     "line-awesome": "1.3.0",
     "lit": "2.1.4"
   },

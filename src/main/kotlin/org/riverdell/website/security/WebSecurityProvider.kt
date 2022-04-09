@@ -7,15 +7,15 @@ package org.riverdell.website.security
 enum class WebSecurityProvider(
     val uri: String,
     val identifier: String,
-    val icon: String = ""
+    val icon: String
 )
 {
     GOOGLE(
         "/oauth2/authorization/google",
-        "Google"
+        "Google", "fa-brands fa-google"
     ),
     GITHUB(
         "/oauth2/authorization/github",
-        "GitHub"
+        "GitHub", "fa-brands fa-github"
     )
 }

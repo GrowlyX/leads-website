@@ -24,6 +24,10 @@ import org.riverdell.website.WebsiteShell.NAME_SHORT
     value = "line-awesome",
     version = "1.3.0"
 )
+@NpmPackage(
+    value = "font-awesome",
+    version = "4.7.0"
+)
 @Theme(
     value = "leads",
     variant = Lumo.DARK

@@ -1,13 +1,18 @@
 package org.riverdell.website.frontend.views
 
-import com.github.mvysny.karibudsl.v10.KComposite
-import com.github.mvysny.karibudsl.v10.verticalLayout
+import com.github.mvysny.karibudsl.v10.*
+import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.html.Anchor
+import com.vaadin.flow.component.html.Div
+import com.vaadin.flow.component.html.Paragraph
+import com.vaadin.flow.component.icon.Icon
+import com.vaadin.flow.component.icon.VaadinIcon
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
+import org.riverdell.website.frontend.icon.FontAwesomeIcon
 import org.riverdell.website.security.WebSecurityProvider
 
 /**
@@ -29,19 +34,35 @@ class LoginView : KComposite()
                 alignItems = FlexComponent
                     .Alignment.CENTER
 
+                val div = Div()
+                div.text = "Login"
+                div.element.style.set(
+                    "font-size", "xx-large"
+                )
+
+                div.alignSelf = FlexComponent
+                    .Alignment.START
+
+                val text = Paragraph()
+                text.add("Please login with one of the following providers:")
+
+                this.add(div, text)
+
                 for (provider in WebSecurityProvider.values())
                 {
-                    val loginLink = Anchor(
-                        provider.uri,
+                    val button = button(
                         "Login with ${provider.identifier}"
-                    )
+                    ) {
+                        onLeftClick {
+                            UI.getCurrent().page
+                                .setLocation(provider.uri)
+                        }
 
-                    loginLink.element.setAttribute(
-                        "router-ignore", true
-                    )
-                    loginLink.style.set("margin-top", "100px")
+                        this.icon =
+                            FontAwesomeIcon(provider.icon)
+                    }
 
-                    this.add(loginLink)
+                    this.add(button)
                 }
             }
         }

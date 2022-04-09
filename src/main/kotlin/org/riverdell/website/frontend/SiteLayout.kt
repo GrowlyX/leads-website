@@ -109,21 +109,21 @@ class SiteLayout(
             return layout
         }
 
-        val user = userSession.getUser().join()
-
-        val avatar = Avatar(
-            user.username, user.picture
-        )
-
-        avatar.addClassNames("me-xs")
-        attachContextMenu(avatar)
-
-        val name = Span(user.username)
-
-        name.addClassNames(
-            "font-medium", "text-s", "text-secondary"
-        )
-        layout.add(avatar, name)
+//        val user = userSession.getUser().join()
+//
+//        val avatar = Avatar(
+//            user.username, user.picture
+//        )
+//
+//        avatar.addClassNames("me-xs")
+//        attachContextMenu(avatar)
+//
+//        val name = Span(user.username)
+//
+//        name.addClassNames(
+//            "font-medium", "text-s", "text-secondary"
+//        )
+//        layout.add(avatar, name)
 
         return layout
     }
