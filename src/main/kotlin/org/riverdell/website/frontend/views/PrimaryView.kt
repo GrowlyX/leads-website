@@ -66,7 +66,7 @@ class PrimaryView(
                     .getUser().join()
 
                 val div = Div()
-                div.text = "Hey ${user.username}! "
+                div.text = "Hey ${user.firstName}, ${user.lastName}! "
                 div.element.style.set(
                     "font-size", "xx-large"
                 )

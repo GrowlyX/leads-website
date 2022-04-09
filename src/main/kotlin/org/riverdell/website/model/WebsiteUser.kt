@@ -8,7 +8,14 @@ import java.util.UUID
  */
 class WebsiteUser(
     val uniqueId: UUID,
-    val email: String,
+    var email: String,
     val username: String,
     val picture: String
 )
+{
+    var firstName = ""
+    var lastName = ""
+
+    fun isStaff() = WebsiteUserStaff
+        .staffAccess.contains(this.email)
+}

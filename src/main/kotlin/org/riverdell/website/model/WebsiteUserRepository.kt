@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture
  */
 object WebsiteUserRepository
 {
-    private val repository = DataHandler
+    val repository = DataHandler
         .linkTypeToId<WebsiteUser>("email")
         .withConnectionPool<NoAuthMongoConnectionPool> {
             this.databaseName = "website"

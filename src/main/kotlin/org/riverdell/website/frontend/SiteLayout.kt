@@ -13,6 +13,7 @@ import org.riverdell.website.frontend.menu.MenuEntry
 import org.riverdell.website.frontend.views.LoginView
 import org.riverdell.website.frontend.views.LogoutView
 import org.riverdell.website.frontend.views.PrimaryView
+import org.riverdell.website.frontend.views.SettingsView
 import org.riverdell.website.model.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
@@ -80,10 +81,20 @@ class SiteLayout(
     {
         return if (userSession.loggedIn())
         {
+            val user = this.userSession
+                .getUser().join()
+
             arrayOf(
                 MenuEntry("Home", "la la-home", PrimaryView::class.java),
-                MenuEntry("Logout", "las la-sign-out-alt", LogoutView::class.java)
-            )
+                MenuEntry("Logout", "las la-sign-out-alt", LogoutView::class.java),
+                MenuEntry("Options", "la la-cog", SettingsView::class.java),
+                MenuEntry("Tutorials", "la la-globe", SettingsView::class.java)
+            ).apply {
+                if (user.isStaff())
+                {
+//                    MenuEntry("Staff Panel")
+                }
+            }
         } else arrayOf(
             MenuEntry("Home", "la la-home", PrimaryView::class.java),
             MenuEntry("Login", "la la-lock", LoginView::class.java)
