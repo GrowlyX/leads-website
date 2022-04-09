@@ -4,8 +4,8 @@ import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.html.Anchor
 import com.vaadin.flow.component.html.ListItem
 import com.vaadin.flow.component.html.Span
+import com.vaadin.flow.component.icon.Icon
 import com.vaadin.flow.router.RouterLink
-import org.riverdell.website.frontend.icon.LineAwesomeIcon
 
 /**
  * @author GrowlyX
@@ -13,12 +13,12 @@ import org.riverdell.website.frontend.icon.LineAwesomeIcon
  */
 class MenuEntry(
     private val title: String,
-    private val icon: String
+    private val icon: Component
 ) : ListItem()
 {
     constructor(
         title: String,
-        icon: String,
+        icon: Component,
         reference: String
     ) : this(title, icon)
     {
@@ -41,7 +41,7 @@ class MenuEntry(
             )
 
             entry.add(
-                LineAwesomeIcon(icon), this
+                icon, this
             )
         }
 
@@ -50,7 +50,7 @@ class MenuEntry(
 
     constructor(
         title: String,
-        icon: String,
+        icon: Component,
         view: Class<out Component>
     ) : this(title, icon)
     {
@@ -66,7 +66,7 @@ class MenuEntry(
             )
 
             entry.add(
-                LineAwesomeIcon(icon), this
+                icon, this
             )
         }
 

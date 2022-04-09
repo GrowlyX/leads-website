@@ -1,12 +1,17 @@
 package org.riverdell.website.frontend
 
+import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
+import com.vaadin.flow.component.ClickNotifier
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.applayout.AppLayout
 import com.vaadin.flow.component.applayout.DrawerToggle
 import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.contextmenu.ContextMenu
+import com.vaadin.flow.component.dependency.JsModule
+import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.html.*
+import com.vaadin.flow.component.icon.IronIcon
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.server.VaadinServletRequest
 import org.riverdell.website.frontend.menu.MenuEntry
@@ -85,19 +90,19 @@ class SiteLayout(
                 .getUser().join()
 
             arrayOf(
-                MenuEntry("Home", "la la-home", PrimaryView::class.java),
-                MenuEntry("Logout", "las la-sign-out-alt", LogoutView::class.java),
-                MenuEntry("Options", "la la-cog", SettingsView::class.java),
-                MenuEntry("Tutorials", "la la-globe", SettingsView::class.java)
+                MenuEntry("Home", FontAwesome.Solid.HOUSE.create(), PrimaryView::class.java),
+                MenuEntry("Logout", Icon("sign-out"), LogoutView::class.java),
+                MenuEntry("Options", FontAwesome.Solid.GEAR.create(), SettingsView::class.java),
+                MenuEntry("Tutorials", FontAwesome.Solid.GLOBE.create(), SettingsView::class.java)
             ).apply {
                 if (user.isStaff())
                 {
-//                    MenuEntry("Staff Panel")
+                    MenuEntry("Staff Panel", FontAwesome.Solid.ID_BADGE.create(), SettingsView::class.java)
                 }
             }
         } else arrayOf(
-            MenuEntry("Home", "la la-home", PrimaryView::class.java),
-            MenuEntry("Login", "la la-lock", LoginView::class.java)
+            MenuEntry("Home", FontAwesome.Solid.HOUSE.create(), PrimaryView::class.java),
+            MenuEntry("Login", Icon("sign-in"), LoginView::class.java)
         )
     }
 
@@ -188,4 +193,8 @@ class SiteLayout(
 
         return title?.value ?: "Page - Site"
     }
+
+    @JsModule("./font-awesome-iron-iconset/far.js")
+    @NpmPackage(value = "@flowingcode/font-awesome-iron-iconset", version = "3.0.0")
+    class Icon(icon: String) : IronIcon("fa", icon), ClickNotifier<IronIcon?>
 }

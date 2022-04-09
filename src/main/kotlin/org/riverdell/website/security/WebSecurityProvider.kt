@@ -1,5 +1,7 @@
 package org.riverdell.website.security
 
+import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
+import com.vaadin.flow.component.icon.Icon
 import com.vaadin.flow.component.icon.VaadinIcon
 
 /**
@@ -9,16 +11,16 @@ import com.vaadin.flow.component.icon.VaadinIcon
 enum class WebSecurityProvider(
     val uri: String,
     val identifier: String,
-    val icon: VaadinIcon
+    val icon: FontAwesome.Brands
 )
 {
     GOOGLE(
         "/oauth2/authorization/google",
-        "Google", VaadinIcon.GOOGLE_PLUS_SQUARE
+        "Google", FontAwesome.Brands.GOOGLE
     ),
     FACEBOOK(
         "/oauth2/authorization/facebook",
-        "Facebook", VaadinIcon.FACEBOOK
+        "Facebook", FontAwesome.Brands.FACEBOOK_F
     ),
 //    GITHUB(
 //        "/oauth2/authorization/github",
