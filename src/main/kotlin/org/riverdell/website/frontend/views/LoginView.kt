@@ -11,6 +11,7 @@ import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
+import org.riverdell.website.model.WebsiteUserSession
 import org.riverdell.website.security.WebSecurityProvider
 
 /**
@@ -23,7 +24,9 @@ import org.riverdell.website.security.WebSecurityProvider
 )
 @PageTitle("Login")
 @AnonymousAllowed
-class LoginView : KComposite()
+class LoginView(
+    private val session: WebsiteUserSession
+) : KComposite()
 {
     init
     {
@@ -31,6 +34,21 @@ class LoginView : KComposite()
             verticalLayout {
                 alignItems = FlexComponent
                     .Alignment.CENTER
+
+                if (session.loggedIn())
+                {
+                    val div = Div()
+                    div.text = "Error"
+                    div.element.style.set(
+                        "font-size", "xx-large"
+                    )
+
+                    val text = Paragraph()
+                    text.add("You're already logged in.")
+
+                    this.add(div, text)
+                    return@verticalLayout
+                }
 
                 val div = Div()
                 div.text = "Login"
