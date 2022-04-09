@@ -14,7 +14,11 @@ enum class WebSecurityProvider(
 {
     GOOGLE(
         "/oauth2/authorization/google",
-        "Google", VaadinIcon.GOOGLE_PLUS
+        "Google", VaadinIcon.GOOGLE_PLUS_SQUARE
+    ),
+    FACEBOOK(
+        "/oauth2/authorization/facebook",
+        "Facebook", VaadinIcon.FACEBOOK
     ),
 //    GITHUB(
 //        "/oauth2/authorization/github",
