@@ -34,3 +34,9 @@ spring:
             clientSecret: "e4a38218ccb49f50b1647cc7b67c671787fd50ec"
             scope:
               - "user"
+        provider:
+          discord:
+            authorizationUri: https://discordapp.com/api/oauth2/authorize
+            tokenUri: https://discordapp.com/api/oauth2/token
+            userInfoUri: https://discordapp.com/api/users/@me
+            usernameAttribute: username
