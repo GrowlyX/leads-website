@@ -17,5 +17,9 @@ enum class WebSecurityProvider(
     GITHUB(
         "/oauth2/authorization/github",
         "GitHub", "fa-brands fa-github"
+    ),
+    DISCORD(
+        "/oauth2/authorization/discord",
+        "Discord", "fa-brands fa-discord"
     )
 }

@@ -40,9 +40,6 @@ class LoginView : KComposite()
                     "font-size", "xx-large"
                 )
 
-                div.alignSelf = FlexComponent
-                    .Alignment.START
-
                 val text = Paragraph()
                 text.add("Please login with one of the following providers:")
 
