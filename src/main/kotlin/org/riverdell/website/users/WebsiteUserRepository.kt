@@ -1,4 +1,4 @@
-package org.riverdell.website.model
+package org.riverdell.website.users
 
 import io.github.nosequel.data.DataHandler
 import io.github.nosequel.data.DataStoreType

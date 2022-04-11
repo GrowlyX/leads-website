@@ -52,6 +52,7 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
 	implementation 'org.springframework.security:spring-security-core:5.6.2'
+	implementation 'org.vaadin.maxime:markdown-area:1.0.2'
 
 	implementation 'com.flowingcode.addons:font-awesome-iron-iconset:3.0.0'
 	implementation "com.github.mvysny.karibudsl:karibu-dsl:1.1.1"

@@ -14,8 +14,7 @@ import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.VaadinServletRequest
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
-import org.riverdell.website.model.WebsiteUserSession
-import org.springframework.security.core.context.SecurityContextHolder
+import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
 /**

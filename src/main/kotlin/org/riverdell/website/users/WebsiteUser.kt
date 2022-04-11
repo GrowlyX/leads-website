@@ -1,4 +1,4 @@
-package org.riverdell.website.model
+package org.riverdell.website.users
 
 import java.util.UUID
 

@@ -21,7 +21,7 @@ import org.riverdell.website.frontend.views.LoginView
 import org.riverdell.website.frontend.views.LogoutView
 import org.riverdell.website.frontend.views.PrimaryView
 import org.riverdell.website.frontend.views.SettingsView
-import org.riverdell.website.model.WebsiteUserSession
+import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
 /**

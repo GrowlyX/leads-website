@@ -5,13 +5,12 @@ import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.html.Paragraph
-import com.vaadin.flow.component.icon.VaadinIcon
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
-import org.riverdell.website.model.WebsiteUserSession
+import org.riverdell.website.users.WebsiteUserSession
 import org.riverdell.website.security.WebSecurityProvider
 
 /**

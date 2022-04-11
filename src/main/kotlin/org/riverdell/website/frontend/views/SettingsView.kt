@@ -9,18 +9,16 @@ import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import org.riverdell.website.frontend.SiteLayout
 import javax.annotation.security.PermitAll
-import com.vaadin.flow.component.datepicker.DatePicker
 import com.vaadin.flow.component.formlayout.FormLayout
 import com.vaadin.flow.component.html.H3
 import com.vaadin.flow.component.notification.Notification
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 
 import com.vaadin.flow.component.textfield.EmailField
 import com.vaadin.flow.component.textfield.TextField
 import com.vaadin.flow.data.binder.Binder
-import org.riverdell.website.model.WebsiteUser
-import org.riverdell.website.model.WebsiteUserRepository
-import org.riverdell.website.model.WebsiteUserSession
+import org.riverdell.website.users.WebsiteUser
+import org.riverdell.website.users.WebsiteUserRepository
+import org.riverdell.website.users.WebsiteUserSession
 
 
 /**
