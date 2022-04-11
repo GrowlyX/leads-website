@@ -19,5 +19,5 @@ class Tutorial(
     var description = ""
     var labels = ""
 
-    var created by Delegates.notNull<Long>()
+    var created = 0L
 }

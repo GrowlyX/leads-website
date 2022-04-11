@@ -3,6 +3,7 @@ package org.riverdell.website.frontend.views.tutorial.staff
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.div
 import com.github.mvysny.karibudsl.v10.horizontalLayout
+import com.github.mvysny.karibudsl.v10.verticalLayout
 import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.button.ButtonVariant
@@ -41,22 +42,12 @@ class TutorialCreationView(
 ) : KComposite()
 {
     private val titleField = TextField("Title")
-        .apply { isRequired = true }
-
     private val subTitle = TextField("Subtitle")
-        .apply { isRequired = true }
 
     private val description = TextArea("Description")
-        .apply { isRequired = true }
-
     private val image = TextField("Cover Image URL")
-        .apply { isRequired = true }
-
-    private val content = MarkdownArea("Content")
-        .apply { require(true) }
 
     private val labels = TextField("Labels")
-        .apply { isRequired = true }
 
     private val cancel = Button("Cancel")
     private val save = Button("Save")
@@ -67,6 +58,8 @@ class TutorialCreationView(
     {
         ui {
             div {
+                val markdown = MarkdownArea()
+
                 addClassName("about-view")
 
                 val user = session.getUser().join()
@@ -82,13 +75,30 @@ class TutorialCreationView(
                     FormLayout().apply {
                         val fields = listOf(
                             titleField, subTitle, description,
-                            image, labels, content
+                            image, labels
                         )
+
+                        titleField.isRequired = true
+                        subTitle.isRequired = true
+                        description.isRequired = true
+                        image.isRequired = true
 
                         for (field in fields)
                         {
                             add(field)
                         }
+                    }
+                )
+
+                add(
+                    verticalLayout {
+                        val content = markdown
+                            .apply { require(true) }
+
+                        add(
+                            H3("Content"),
+                            content
+                        )
                     }
                 )
 
@@ -124,6 +134,12 @@ class TutorialCreationView(
                 }
 
                 save.addClickListener {
+                    binder.bean.content =
+                        markdown.input.value
+
+                    binder.bean.created =
+                        System.currentTimeMillis()
+
                     TutorialRepository
                         .repository()
                         .storeAsync(

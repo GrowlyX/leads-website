@@ -17,9 +17,8 @@ class TutorialViewCard(
 
         val div = Div()
         div.addClassNames(
-            "bg-contrast", "flex items-center",
-            "justify-center", "mb-m", "overflow-hidden",
-            "rounded-m w-full"
+            "bg-contrast", "flex items-center", "justify-center",
+            "mb-m", "overflow-hidden", "rounded-m w-full"
         )
         div.height = "160px"
 
