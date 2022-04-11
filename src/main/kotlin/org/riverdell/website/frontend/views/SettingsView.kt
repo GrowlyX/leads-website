@@ -35,10 +35,9 @@ class SettingsView(
     private val session: WebsiteUserSession
 ) : KComposite()
 {
-    private val firstName = TextField("First name")
-    private val lastName = TextField("Last name")
+    private val firstName = TextField("First name", "John")
+    private val lastName = TextField("Last name", "Doe")
     private val email = EmailField("Email address")
-
 
     private val cancel = Button("Cancel")
     private val save = Button("Save")

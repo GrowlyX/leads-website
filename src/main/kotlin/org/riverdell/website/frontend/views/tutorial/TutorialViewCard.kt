@@ -47,7 +47,7 @@ class TutorialViewCard(
 
         this.add(div, header, subtitle, description)
 
-        for (label in tutorial.labels)
+        for (label in tutorial.labels.split(", "))
         {
             val badge = Span()
             badge.element.setAttribute("theme", "badge")

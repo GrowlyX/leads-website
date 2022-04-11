@@ -9,14 +9,15 @@ import kotlin.properties.Delegates
 class Tutorial(
     // We want to use a string-based UUID
     val uniqueId: String,
-    val author: String,
-    var title: String,
-    var subTitle: String,
-    var image: String,
-    var content: String,
-    var description: String,
-    var labels: List<String>
+    val author: String
 )
 {
+    var title = ""
+    var subTitle = ""
+    var image = ""
+    var content = ""
+    var description = ""
+    var labels = ""
+
     var created by Delegates.notNull<Long>()
 }

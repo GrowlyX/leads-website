@@ -22,6 +22,7 @@ import org.riverdell.website.frontend.views.LogoutView
 import org.riverdell.website.frontend.views.PrimaryView
 import org.riverdell.website.frontend.views.SettingsView
 import org.riverdell.website.frontend.views.tutorial.TutorialView
+import org.riverdell.website.frontend.views.tutorial.staff.TutorialCreationView
 import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
@@ -100,7 +101,7 @@ class SiteLayout(
             ).apply {
                 if (user.isStaff())
                 {
-                    MenuEntry("Staff Panel", FontAwesome.Solid.ID_BADGE.create(), SettingsView::class.java)
+                    MenuEntry("Tutorial Creation", FontAwesome.Solid.ID_BADGE.create(), TutorialCreationView::class.java)
                 }
             }
         } else arrayOf(
