@@ -21,6 +21,7 @@ import org.riverdell.website.frontend.views.LoginView
 import org.riverdell.website.frontend.views.LogoutView
 import org.riverdell.website.frontend.views.PrimaryView
 import org.riverdell.website.frontend.views.SettingsView
+import org.riverdell.website.frontend.views.tutorial.TutorialView
 import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
@@ -95,7 +96,7 @@ class SiteLayout(
                 MenuEntry("Home", FontAwesome.Solid.HOUSE.create(), PrimaryView::class.java),
                 MenuEntry("Logout", Icon("sign-out"), LogoutView::class.java),
                 MenuEntry("Options", FontAwesome.Solid.GEAR.create(), SettingsView::class.java),
-                MenuEntry("Tutorials", FontAwesome.Solid.GLOBE.create(), SettingsView::class.java)
+                MenuEntry("Tutorials", FontAwesome.Solid.GLOBE.create(), TutorialView::class.java)
             ).apply {
                 if (user.isStaff())
                 {
