@@ -1,4 +1,5 @@
 dependencies:
+  '@flowingcode/font-awesome-iron-iconset': 3.0.0
   '@polymer/iron-icon': 3.0.1
   '@polymer/iron-iconset-svg': 3.0.1
   '@polymer/iron-list': 3.1.0
@@ -1338,6 +1339,14 @@ packages:
       node: '>=10.0.0'
     resolution:
       integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
+  /@flowingcode/font-awesome-iron-iconset/3.0.0:
+    dependencies:
+      '@polymer/iron-icon': 3.0.1
+      '@polymer/iron-iconset-svg': 3.0.1
+      '@polymer/polymer': 3.4.1
+    dev: false
+    resolution:
+      integrity: sha512-mx2OX8Epkr5AR6SJVWxA3wD31y0UenLnRfVeQ6scYg5Rs/EC+sz9V0TcDLNMA3ZrJqadzRgulIMtmHtMNOhsxA==
   /@gar/promisify/1.1.3:
     dev: true
     resolution:
@@ -9183,6 +9192,7 @@ packages:
     resolution:
       integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 specifiers:
+  '@flowingcode/font-awesome-iron-iconset': 3.0.0
   '@polymer/iron-icon': 3.0.1
   '@polymer/iron-iconset-svg': 3.0.1
   '@polymer/iron-list': 3.1.0

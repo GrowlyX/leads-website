@@ -5,6 +5,7 @@ import com.vaadin.flow.component.html.Anchor
 import com.vaadin.flow.component.html.ListItem
 import com.vaadin.flow.component.html.Span
 import com.vaadin.flow.component.icon.Icon
+import com.vaadin.flow.component.icon.IronIcon
 import com.vaadin.flow.router.RouterLink
 
 /**
@@ -66,7 +67,9 @@ class MenuEntry(
             )
 
             entry.add(
-                icon, this
+                (icon as IronIcon).apply {
+                    addClassName("menu-item-button")
+                }, this
             )
         }
 

@@ -1,8 +1,10 @@
 package org.riverdell.website.frontend
 
 import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
+import com.github.mvysny.karibudsl.v10.contextMenu
 import com.vaadin.flow.component.ClickNotifier
 import com.vaadin.flow.component.Component
+import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.applayout.AppLayout
 import com.vaadin.flow.component.applayout.DrawerToggle
 import com.vaadin.flow.component.avatar.Avatar
@@ -130,6 +132,13 @@ class SiteLayout(
         val avatar = Avatar(
             user.username, user.picture
         )
+
+        avatar.contextMenu {
+            this.addItem("Options")
+                .addClickListener {
+                    UI.getCurrent().page.setLocation("/user/options")
+                }
+        }
 
         avatar.addClassNames("me-xs")
         attachContextMenu(avatar)

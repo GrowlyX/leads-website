@@ -3,6 +3,7 @@
   "license": "UNLICENSED",
   "vaadin": {
     "dependencies": {
+      "@flowingcode/font-awesome-iron-iconset": "3.0.0",
       "@polymer/iron-icon": "3.0.1",
       "@polymer/iron-iconset-svg": "3.0.1",
       "@polymer/iron-list": "3.1.0",
@@ -142,9 +143,10 @@
       "workbox-precaching": "6.5.0",
       "workbox-webpack-plugin": "6.5.0"
     },
-    "hash": "2657cef3fe991c186e853aba7a629dccbcb07c19a02c75c0a362f53bed1234bc"
+    "hash": "84eaa3ca417170975f932587c06063d0eca331ca172c070ff4087da6aa7140a7"
   },
   "dependencies": {
+    "@flowingcode/font-awesome-iron-iconset": "3.0.0",
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-iconset-svg": "3.0.1",
     "@polymer/iron-list": "3.1.0",
