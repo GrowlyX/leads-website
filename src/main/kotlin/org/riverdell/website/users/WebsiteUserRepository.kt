@@ -1,8 +1,6 @@
 package org.riverdell.website.users
 
-import io.github.nosequel.data.DataHandler
-import io.github.nosequel.data.DataStoreType
-import io.github.nosequel.data.connection.mongo.NoAuthMongoConnectionPool
+import org.riverdell.website.repository.Repositories
 import java.util.*
 import java.util.concurrent.CompletableFuture
 
@@ -12,16 +10,8 @@ import java.util.concurrent.CompletableFuture
  */
 object WebsiteUserRepository
 {
-    val repository = DataHandler
-        .linkTypeToId<WebsiteUser>("email")
-        .withConnectionPool<NoAuthMongoConnectionPool> {
-            this.databaseName = "website"
-            this.hostname = "127.0.0.1"
-            this.port = 27017
-        }
-        .createStoreType<String, WebsiteUser>(
-            DataStoreType.MONGO
-        )
+    val repository = Repositories
+        .store<WebsiteUser>("email")
 
     fun getOrCreate(
         email: String, firstName: String, picture: String
