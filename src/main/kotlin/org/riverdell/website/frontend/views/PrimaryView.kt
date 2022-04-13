@@ -5,6 +5,7 @@ import com.github.mvysny.karibudsl.v10.button
 import com.github.mvysny.karibudsl.v10.onLeftClick
 import com.github.mvysny.karibudsl.v10.verticalLayout
 import com.vaadin.flow.component.UI
+import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.dependency.CssImport
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.html.Image
@@ -70,8 +71,8 @@ class PrimaryView(
                     "font-size", "xx-large"
                 )
 
-                val image = Image(
-                    user.picture, "Profile Picture"
+                val avatar = Avatar(
+                    user.username, user.picture
                 )
 
                 val button = button("Logout") {
@@ -89,7 +90,7 @@ class PrimaryView(
                 alignItems = FlexComponent
                     .Alignment.CENTER
 
-                add(div, image, button)
+                add(div, avatar, button)
             }
         }
     }

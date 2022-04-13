@@ -5,6 +5,7 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal
 import org.springframework.stereotype.Component
 import org.springframework.web.context.annotation.SessionScope
 import java.util.concurrent.CompletableFuture
+import kotlin.random.Random
 
 /**
  * @author GrowlyX
@@ -28,11 +29,15 @@ open class WebsiteUserSession
                 "OAuth principal does not contain email"
             )
 
-        val name = principal
+        val name = (principal
             .getAttribute<String>("name")
             ?: principal
                 .getAttribute("given_name")
-            ?: "New User"
+            ?: "new user ${
+                Random.nextInt(1000000, 9999999)
+            }").replace(
+                " ", "-"
+            )
 
         val picture = principal
             .getAttribute<String>("picture")

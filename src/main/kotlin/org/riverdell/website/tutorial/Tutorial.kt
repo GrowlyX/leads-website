@@ -1,7 +1,5 @@
 package org.riverdell.website.tutorial
 
-import kotlin.properties.Delegates
-
 /**
  * @author GrowlyX
  * @since 4/10/2022
