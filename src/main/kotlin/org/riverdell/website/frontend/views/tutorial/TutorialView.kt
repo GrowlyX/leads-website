@@ -31,11 +31,11 @@ class TutorialView : Main(), HasComponents, HasStyle
 {
     private val sorts = mutableMapOf<String, (Tutorial) -> Long>()
         .apply {
-            this["Recently created"] = {
+            this["Newest -> Oldest"] = {
                 it.created
             }
 
-            this["the other created"] = {
+            this["Oldest -> Newest"] = {
                 -it.created
             }
         }
@@ -83,22 +83,35 @@ class TutorialView : Main(), HasComponents, HasStyle
         container.add(header, select)
         add(container, imageContainer)
 
-        imageContainer.apply {
-            val tutorials = repository
-                .retrieveAll()
+        val cards = mutableListOf<TutorialViewCard>()
+
+        val tutorials = repository
+            .retrieveAll()
+
+        val refresh: OrderedList.() -> Unit = {
+            for (card in cards)
+            {
+                this.remove(card)
+            }
 
             val filter = sorts[select.value]
-                ?: sorts["Recently created"]!!
+                ?: sorts.values.first()
 
-            for (
-                tutorial in tutorials
-                    .sortedByDescending(filter)
-            )
+            for (tutorial in tutorials.sortedByDescending(filter))
             {
                 this.add(
                     TutorialViewCard(tutorial)
+                        .apply {
+                            cards.add(this)
+                        }
                 )
             }
+        }
+
+        imageContainer.refresh()
+
+        select.addValueChangeListener {
+            imageContainer.refresh()
         }
     }
 }

@@ -18,12 +18,12 @@ spring:
     oauth2:
       client:
         registration:
-          microsoft:
-            # todo:
-            clientId: "c8e3f736-b2a9-4896-82fb-5097b7a16a6a"
-            clientSecret: "jH17Q~uG0QcImmDVvrSKYMzcb5.WH1pnKC_Iv"
-            clientName: "Azure"
-            provider: "azure"
+#          microsoft:
+#            # todo:
+#            clientId: "c8e3f736-b2a9-4896-82fb-5097b7a16a6a"
+#            clientSecret: "jH17Q~uG0QcImmDVvrSKYMzcb5.WH1pnKC_Iv"
+#            clientName: "Azure"
+#            provider: "azure"
           google:
             clientId: "51527637151-ve222nql8vd8t5biedb4ermm42de95bd.apps.googleusercontent.com"
             clientSecret: "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"
