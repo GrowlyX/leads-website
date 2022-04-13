@@ -4,7 +4,7 @@ plugins {
 	id "application"
 	id "maven-publish"
 	id "com.github.johnrengelman.shadow" version "7.1.2"
-	id "org.jetbrains.kotlin.jvm" version "1.6.10"
+	id "org.jetbrains.kotlin.jvm" version "1.6.20"
 	id "org.springframework.boot" version "2.2.4.RELEASE"
 	id "io.spring.dependency-management" version "1.0.9.RELEASE"
 }
@@ -49,6 +49,9 @@ dependencies {
 	implementation "org.springframework.boot:spring-boot-starter-tomcat"
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
+	implementation 'org.jetbrains.kotlin:kotlin-reflect:1.6.20'
 
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
 	implementation 'org.springframework.security:spring-security-core:5.6.2'

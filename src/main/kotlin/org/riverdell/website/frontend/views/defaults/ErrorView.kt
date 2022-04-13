@@ -1,45 +1,37 @@
 package org.riverdell.website.frontend.views.defaults
 
-import com.github.mvysny.karibudsl.v10.KComposite
-import com.github.mvysny.karibudsl.v10.verticalLayout
-import com.vaadin.flow.component.html.Div
-import com.vaadin.flow.component.html.Paragraph
-import com.vaadin.flow.component.orderedlayout.FlexComponent
-import com.vaadin.flow.router.PageTitle
-import com.vaadin.flow.router.Route
+import com.vaadin.flow.component.html.H1
+import com.vaadin.flow.component.html.Span
+import com.vaadin.flow.component.orderedlayout.VerticalLayout
+import com.vaadin.flow.router.*
 import org.riverdell.website.frontend.SiteLayout
-import javax.annotation.security.PermitAll
+import javax.servlet.http.HttpServletResponse
 
 /**
  * @author GrowlyX
  * @since 4/9/2022
  */
-@Route(
-    value = "error",
-    layout = SiteLayout::class
+@ParentLayout(
+    SiteLayout::class
 )
-@PageTitle("Error")
-@PermitAll
-class ErrorView : KComposite()
+class ErrorView : VerticalLayout(), HasErrorParameter<NotFoundException>
 {
+    private val explanation = Span()
+
     init
     {
-        ui {
-            verticalLayout {
-                alignItems = FlexComponent
-                    .Alignment.CENTER
+        add(
+            H1("The page you were looking for was not found."),
+            explanation
+        )
+    }
 
-                val div = Div()
-                div.text = "Error"
-                div.element.style.set(
-                    "font-size", "xx-large"
-                )
-
-                val text = Paragraph()
-                text.add("An internal server error occurred.")
-
-                this.add(div, text)
-            }
-        }
+    override fun setErrorParameter(
+        event: BeforeEnterEvent,
+        parameter: ErrorParameter<NotFoundException>
+    ): Int
+    {
+        explanation.text = "Could not navigate to '${event.location.path}'."
+        return HttpServletResponse.SC_NOT_FOUND
     }
 }
