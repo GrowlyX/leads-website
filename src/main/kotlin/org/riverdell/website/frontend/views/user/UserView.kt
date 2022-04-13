@@ -3,11 +3,10 @@ package org.riverdell.website.frontend.views.user
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.horizontalLayout
 import com.vaadin.flow.component.avatar.Avatar
-import com.vaadin.flow.component.html.Div
-import com.vaadin.flow.component.html.Image
-import com.vaadin.flow.component.html.Paragraph
+import com.vaadin.flow.component.html.*
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
+import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.BeforeEnterEvent
 import com.vaadin.flow.router.BeforeEnterObserver
 import com.vaadin.flow.router.Route
@@ -26,7 +25,7 @@ import org.riverdell.website.users.WebsiteUserSession
     layout = SiteLayout::class
 )
 @AnonymousAllowed
-class UserView : HorizontalLayout(), BeforeEnterObserver, CompositeLoader<String>
+class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 {
     override fun beforeEnter(
         event: BeforeEnterEvent
@@ -40,22 +39,6 @@ class UserView : HorizontalLayout(), BeforeEnterObserver, CompositeLoader<String
         this.load(username)
     }
 
-    private fun titled(
-        subtitle: String
-    ): Div
-    {
-        val div = Div()
-        div.text = "User not found"
-        div.element.style.set(
-            "font-size", "xx-large"
-        )
-
-        val text = Paragraph()
-        text.add(subtitle)
-
-        return div
-    }
-
     override fun load(t: String)
     {
         alignItems = FlexComponent
@@ -64,9 +47,7 @@ class UserView : HorizontalLayout(), BeforeEnterObserver, CompositeLoader<String
         if (t.isBlank())
         {
             add(
-                titled(
-                    "You must provide a user!"
-                )
+                H3("You must provide a user!")
             )
             return
         }
@@ -80,16 +61,23 @@ class UserView : HorizontalLayout(), BeforeEnterObserver, CompositeLoader<String
         if (user == null)
         {
             add(
-                titled(
+                H3(
                     "No user with the username \"$t\" was found!"
                 )
             )
             return
         }
 
-        add(
-            Avatar(user.username, user.picture)
-        )
+        val horizontal = HorizontalLayout()
+            .apply {
+                add(
+                    Image(user.picture, "Something")
+                )
+
+                add(
+                    user.username
+                )
+            }
 
         if (user.bannerPng != null)
         {
