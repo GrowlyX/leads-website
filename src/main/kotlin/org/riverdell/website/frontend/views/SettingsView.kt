@@ -90,18 +90,12 @@ class SettingsView(
                 }
 
                 upload.addFinishedListener {
-                    val uniqueId = binder.bean.bannerPng
-                        ?: UUID.randomUUID()
+                    val uniqueId = UUID.randomUUID()
 
                     val file = File(
                         "resources/banners",
                         "$uniqueId.png"
                     )
-
-                    if (file.exists())
-                    {
-                        file.delete()
-                    }
 
                     Files.copy(
                         fileBuffer.inputStream,
@@ -193,7 +187,21 @@ class SettingsView(
                     VerticalLayout(
                         H3("Banner"),
                         Paragraph("Upload a custom profile banner for other users to see."),
-                        upload
+                        upload,
+                        Button("Reset your Banner")
+                            .apply {
+                                addThemeVariants(
+                                    ButtonVariant.LUMO_ERROR
+                                )
+
+                                addClickListener {
+                                    binder.bean.bannerPng = null
+
+                                    Notification.show(
+                                        "Your banner has been reset!"
+                                    )
+                                }
+                            }
                     )
                 )
 

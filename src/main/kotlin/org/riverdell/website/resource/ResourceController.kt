@@ -19,6 +19,28 @@ open class ResourceController
     private val nonExistent: UUID =
         UUID.randomUUID()
 
+    @GetMapping("/resources/static/{uuid}")
+    fun getStaticContent(
+        @PathVariable("uuid") uuid: String,
+        response: HttpServletResponse
+    )
+    {
+        val banner = File(
+            "resources/static",
+            "$uuid.png"
+        )
+
+        if (banner.exists())
+        {
+            response.contentType = "image/png"
+
+            IOUtils.copy(
+                banner.inputStream(),
+                response.outputStream
+            )
+        }
+    }
+
     @GetMapping("/resources/banners/{uuid}")
     fun getBanner(
         @PathVariable("uuid") uuid: String,

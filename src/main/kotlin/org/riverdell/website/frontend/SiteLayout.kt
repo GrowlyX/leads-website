@@ -1,7 +1,9 @@
 package org.riverdell.website.frontend
 
 import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
+import com.github.mvysny.karibudsl.v10.alignSelf
 import com.github.mvysny.karibudsl.v10.contextMenu
+import com.github.mvysny.kaributools.label
 import com.vaadin.flow.component.ClickNotifier
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.UI
@@ -14,6 +16,9 @@ import com.vaadin.flow.component.dependency.JsModule
 import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.html.*
 import com.vaadin.flow.component.icon.IronIcon
+import com.vaadin.flow.component.orderedlayout.FlexComponent
+import com.vaadin.flow.data.binder.Binder
+import com.vaadin.flow.data.provider.DataProvider
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.server.VaadinServletRequest
 import org.riverdell.website.frontend.menu.MenuEntry
@@ -27,7 +32,7 @@ import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
 /**
- * @author Orf1, GrowlyX
+ * @author GrowlyX
  * @since 4/8/2022
  */
 class SiteLayout(
@@ -47,6 +52,45 @@ class SiteLayout(
         addToDrawer(
             createDrawerContent()
         )
+//
+//        val users = WebsiteUserRepository
+//            .repository.retrieveAllAsync()
+//
+//        users.thenAccept { usersCollection ->
+//            val binder = Binder<String>()
+//
+//            val lookup = LookupField<String>()
+//                .apply {
+//                    alignSelf = FlexComponent
+//                        .Alignment.END
+//
+//                    setDataProvider(
+//                        DataProvider.ofCollection(
+//                            usersCollection.map { it.username }
+//                        )
+//                    )
+//
+//                    label = "Users"
+//
+//                    setWidthFull()
+//
+//                    grid.addColumn { it }
+//                        .setHeader("Username")
+//
+//                    binder.forField(this)
+//                        .bind({
+//                            binder.bean
+//                        }, { _, it ->
+//                            binder.bean = it
+//                        })
+//                }
+//
+//            binder.addValueChangeListener {
+//                UI.getCurrent().page.setLocation("/user/${it.value}")
+//            }
+//
+//            addToNavbar(false, lookup)
+//        }
     }
 
     private fun createDrawerContent(): Component

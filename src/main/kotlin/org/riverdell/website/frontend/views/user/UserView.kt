@@ -2,6 +2,7 @@ package org.riverdell.website.frontend.views.user
 
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.horizontalLayout
+import com.vaadin.flow.component.Unit
 import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.html.*
 import com.vaadin.flow.component.orderedlayout.FlexComponent
@@ -27,6 +28,8 @@ import org.riverdell.website.users.WebsiteUserSession
 @AnonymousAllowed
 class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 {
+    private val static = "http://localhost:8080/resources/static/default_banner.png"
+
     override fun beforeEnter(
         event: BeforeEnterEvent
     )
@@ -41,11 +44,11 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 
     override fun load(t: String)
     {
-        alignItems = FlexComponent
-            .Alignment.CENTER
-
         if (t.isBlank())
         {
+            alignItems = FlexComponent
+                .Alignment.CENTER
+
             add(
                 H3("You must provide a user!")
             )
@@ -60,6 +63,9 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 
         if (user == null)
         {
+            alignItems = FlexComponent
+                .Alignment.CENTER
+
             add(
                 H3(
                     "No user with the username \"$t\" was found!"
@@ -70,23 +76,37 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 
         val horizontal = HorizontalLayout()
             .apply {
+                alignItems = FlexComponent
+                    .Alignment.START
+
                 add(
                     Image(user.picture, "Something")
+                        .apply {
+                            setHeight(75F, Unit.PIXELS)
+                            setWidth(75F, Unit.PIXELS)
+                        }
                 )
 
                 add(
-                    user.username
+                    H3(user.username)
                 )
             }
 
-        if (user.bannerPng != null)
-        {
-            add(
-                Image(
-                    "http://localhost:8080/resources/banners/${user.bannerPng}",
-                    "Banner"
-                )
-            )
-        }
+        add(
+            Image(
+                user.bannerPng?.let {
+                    "http://localhost:8080/resources/banners/$it"
+                } ?: static,
+                "Banner"
+            ).apply {
+                alignItems = FlexComponent
+                    .Alignment.CENTER
+
+                // maintain aspect ratio
+                setHeight(350F, Unit.PIXELS)
+            }
+        )
+
+        add(horizontal)
     }
 }
