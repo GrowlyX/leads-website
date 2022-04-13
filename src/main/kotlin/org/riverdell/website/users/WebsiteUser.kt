@@ -8,7 +8,7 @@ import java.util.UUID
  */
 class WebsiteUser(
     val uniqueId: UUID,
-    var email: String,
+    val email: String,
     var username: String,
     val picture: String
 )
