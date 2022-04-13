@@ -7,7 +7,6 @@ import java.util.UUID
  * @since 4/1/2022
  */
 class WebsiteUser(
-    val uniqueId: UUID,
     val email: String,
     var username: String,
     val picture: String

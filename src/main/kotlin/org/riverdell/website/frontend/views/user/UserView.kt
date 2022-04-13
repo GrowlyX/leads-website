@@ -10,6 +10,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.BeforeEnterEvent
 import com.vaadin.flow.router.BeforeEnterObserver
+import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.riverdell.website.frontend.SiteLayout
@@ -25,6 +26,7 @@ import org.riverdell.website.users.WebsiteUserSession
     value = "user/:username",
     layout = SiteLayout::class
 )
+@PageTitle("Viewing user profile...")
 @AnonymousAllowed
 class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 {

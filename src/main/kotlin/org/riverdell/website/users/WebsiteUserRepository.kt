@@ -22,7 +22,6 @@ object WebsiteUserRepository
                 if (it == null)
                 {
                     val user = WebsiteUser(
-                        UUID.randomUUID(),
                         email, firstName, picture
                     )
 

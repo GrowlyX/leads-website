@@ -26,8 +26,7 @@ open class ResourceController
     )
     {
         val banner = File(
-            "resources/static",
-            "$uuid.png"
+            "resources/static", uuid
         )
 
         if (banner.exists())

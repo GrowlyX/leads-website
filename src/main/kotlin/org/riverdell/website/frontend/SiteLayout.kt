@@ -1,9 +1,7 @@
 package org.riverdell.website.frontend
 
 import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
-import com.github.mvysny.karibudsl.v10.alignSelf
 import com.github.mvysny.karibudsl.v10.contextMenu
-import com.github.mvysny.kaributools.label
 import com.vaadin.flow.component.ClickNotifier
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.UI
@@ -16,9 +14,6 @@ import com.vaadin.flow.component.dependency.JsModule
 import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.html.*
 import com.vaadin.flow.component.icon.IronIcon
-import com.vaadin.flow.component.orderedlayout.FlexComponent
-import com.vaadin.flow.data.binder.Binder
-import com.vaadin.flow.data.provider.DataProvider
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.server.VaadinServletRequest
 import org.riverdell.website.frontend.menu.MenuEntry
