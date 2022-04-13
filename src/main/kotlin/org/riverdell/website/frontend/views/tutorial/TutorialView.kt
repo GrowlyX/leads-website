@@ -47,7 +47,7 @@ class TutorialView : Main(), HasComponents, HasStyle
     init
     {
         addClassNames(
-            "hello-world-view", "max-w-screen-lg",
+            "tutorial-view", "max-w-screen-lg",
             "mx-auto", "pb-l", "px-l"
         )
 

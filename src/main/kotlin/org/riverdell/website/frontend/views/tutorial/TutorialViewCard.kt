@@ -27,7 +27,6 @@ class TutorialViewCard(
         div.height = "160px"
 
         val image = Image()
-        image.width = "100%"
         image.src = tutorial.image
 
         image.addClickListener {
@@ -37,7 +36,7 @@ class TutorialViewCard(
         }
 
         image.setHeight(200F, Unit.PIXELS)
-        image.setWidth(200F, Unit.PIXELS)
+        image.setWidth(350F, Unit.PIXELS)
 
         image.setAlt(tutorial.title)
 
