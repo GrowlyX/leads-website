@@ -1,11 +1,7 @@
 package org.riverdell.website.frontend.views.tutorial
 
-import com.github.mvysny.karibudsl.v10.h2
-import com.github.mvysny.karibudsl.v10.horizontalLayout
-import com.github.mvysny.karibudsl.v10.verticalLayout
 import com.vaadin.flow.component.HasComponents
 import com.vaadin.flow.component.HasStyle
-import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.html.H2
 import com.vaadin.flow.component.html.Main
 import com.vaadin.flow.component.html.OrderedList
@@ -91,17 +87,16 @@ class TutorialView : Main(), HasComponents, HasStyle
             val tutorials = repository
                 .retrieveAll()
 
-            for (tutorial in tutorials)
+            val filter = sorts[select.value]
+                ?: sorts["Recently created"]!!
+
+            for (
+                tutorial in tutorials
+                    .sortedByDescending(filter)
+            )
             {
                 this.add(
                     TutorialViewCard(tutorial)
-                        .apply {
-                            addClickListener {
-                                UI.getCurrent().page.setLocation("/tutorial/${
-                                    tutorial.uniqueId
-                                }")
-                            }
-                        }
                 )
             }
         }
