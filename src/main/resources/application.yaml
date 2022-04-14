@@ -18,41 +18,40 @@ spring:
     oauth2:
       client:
         registration:
-#          microsoft:
-#            # todo:
-#            clientId: "c8e3f736-b2a9-4896-82fb-5097b7a16a6a"
-#            clientSecret: "jH17Q~uG0QcImmDVvrSKYMzcb5.WH1pnKC_Iv"
-#            clientName: "Azure"
-#            provider: "azure"
+          twitter:
+            clientId: Q19mdnc1VHRTc2JuSXlIMUIwcVM6MTpjaQ
+            clientSecret: zmCTUkhAG7StJGbwkv6LsviVLE3gv86jZXmgmTLEY5e-83vET_
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/twitter"
           google:
             clientId: "51527637151-ve222nql8vd8t5biedb4ermm42de95bd.apps.googleusercontent.com"
             clientSecret: "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"
+          discord:
+            clientId: "962150567524831232"
+            clientSecret: "CtKl_ACq78BXp--cjA6ktGxNWGq1sv2a"
+            clientAuthenticationMethod: post
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/discord"
+            scope:
+              - "email"
+              - "identify"
           facebook:
             clientId: "3210071899317932"
             clientSecret: "79c2268ddefa9764631b49b4cedb029d"
             scope:
               - email
               - public_profile
-#          discord:
-#            clientId: "962150567524831232"
-#            clientSecret: "CtKl_ACq78BXp--cjA6ktGxNWGq1sv2a"
-#            clientAuthenticationMethod: post
-#            authorizationGrantType: authorization_code
-#            redirect-uri-template: "{baseUrl}/login/oauth2/code/discord"
-#            scope:
-#              - "email"
-#              - "identify"
-#          github:
-#            clientId: "0afc9bf38b0dac9cd8f7"
-#            clientSecret: "e4a38218ccb49f50b1647cc7b67c671787fd50ec"
-#            scope:
-#              - "user"
         provider:
+          twitter:
+            authorizationUri: https://api.twitter.com/oauth/authorize
+            tokenUri: https://api.twitter.com/oauth/access_token
+            userInfoUri: https://api.twitter.com/1.1/users/show.json
+            userNameAttribute: screen_name
           discord:
             authorizationUri: https://discordapp.com/api/oauth2/authorize
             tokenUri: https://discordapp.com/api/oauth2/token
             userInfoUri: https://discordapp.com/api/users/@me
-            usernameAttribute: username
+            userNameAttribute: username
   servlet:
     multipart:
       max-file-size: 10MB

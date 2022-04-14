@@ -87,15 +87,17 @@ class TutorialCreationView(
                         {
                             add(field)
                         }
+                    }
+                )
 
+                add(
+                    verticalLayout {
                         val content = markdown
                             .apply { require(true) }
 
                         add(
-                            H3("Content")
-                                .apply {
-                                    add(content)
-                                }
+                            H3("Content"),
+                            content
                         )
                     }
                 )

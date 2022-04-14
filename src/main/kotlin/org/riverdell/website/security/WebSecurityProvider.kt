@@ -9,7 +9,8 @@ import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
 enum class WebSecurityProvider(
     val uri: String,
     val identifier: String,
-    val icon: FontAwesome.Brands
+    val icon: FontAwesome.Brands,
+    val enabled: Boolean = true
 )
 {
     GOOGLE(
@@ -20,12 +21,18 @@ enum class WebSecurityProvider(
         "/oauth2/authorization/facebook",
         "Facebook", FontAwesome.Brands.FACEBOOK_F
     ),
-//    GITHUB(
-//        "/oauth2/authorization/github",
-//        "GitHub", "fa-brands fa-github"
-//    ),
-//    DISCORD(
-//        "/oauth2/authorization/discord",
-//        "Discord", "fa-brands fa-discord"
-//    )
+
+    DISCORD(
+        "/oauth2/authorization/discord",
+        "Discord", FontAwesome.Brands.DISCORD
+    ),
+    // disabled
+    TWITTER(
+        "/oauth2/authorization/twitter",
+        "Twitter", FontAwesome.Brands.TWITTER, false
+    ),
+    GITHUB(
+        "/oauth2/authorization/github",
+        "GitHub", FontAwesome.Brands.GITHUB, false
+    ),
 }

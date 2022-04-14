@@ -60,22 +60,36 @@ class LoginView(
 
                 this.add(div, text)
 
-                for (provider in WebSecurityProvider.values())
+                val providers = WebSecurityProvider
+                    .values()
+                    .sortedByDescending {
+                        it.enabled
+                    }
+
+                for (provider in providers)
                 {
                     val button = button(
                         "Login with ${provider.identifier}"
                     ) {
-                        onLeftClick {
-                            UI.getCurrent().page
-                                .setLocation(provider.uri)
+                        if (provider.enabled)
+                        {
+                            onLeftClick {
+                                UI.getCurrent().page
+                                    .setLocation(provider.uri)
+                            }
                         }
 
                         this.icon = provider.icon.create()
                         this.addThemeVariants(
-                            ButtonVariant.LUMO_PRIMARY,
-                            ButtonVariant.LUMO_SUCCESS
+                            if (provider.enabled)
+                            {
+                                ButtonVariant.LUMO_SUCCESS
+                            } else
+                            {
+                                ButtonVariant.LUMO_ERROR
+                            },
+                            ButtonVariant.MATERIAL_OUTLINED
                         )
-                        this.isAutofocus = true
                     }
 
                     this.add(button)

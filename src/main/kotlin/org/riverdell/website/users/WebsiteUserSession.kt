@@ -1,6 +1,7 @@
 package org.riverdell.website.users
 
 import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.oauth2.core.AuthorizationGrantType
 import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal
 import org.springframework.stereotype.Component
 import org.springframework.web.context.annotation.SessionScope
@@ -47,6 +48,14 @@ open class WebsiteUserSession
 
         return WebsiteUserRepository
             .getOrCreate(email, name, picture)
+            .thenApply {
+                val description = principal
+                    .getAttribute<String>("description")
+                    ?: ""
+
+                it.aboutMe = description
+                return@thenApply it
+            }
     }
 
     fun loggedIn(): Boolean
