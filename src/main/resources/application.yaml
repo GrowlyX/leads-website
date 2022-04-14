@@ -35,13 +35,27 @@ spring:
             scope:
               - "email"
               - "identify"
+          microsoft:
+            client-id: c8e3f736-b2a9-4896-82fb-5097b7a16a6a
+            client-secret: KoX7Q~-BzXbNibSRTQbiGRxDU6hYz4BBTlflA
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/microsoft'
+            scope:
+              - "User.Read"
+            client-name: Microsoft
           facebook:
             clientId: "3210071899317932"
             clientSecret: "79c2268ddefa9764631b49b4cedb029d"
             scope:
-              - email
-              - public_profile
+              - "email"
+              - "public_profile"
         provider:
+          microsoft:
+            authorization-uri: https://login.microsoftonline.com/common/oauth2/authorize?resource=https://graph.microsoft.com/
+            token-uri: https://login.microsoftonline.com/common/oauth2/token
+            user-info-uri: https://graph.microsoft.com/v1.0/me
+            user-name-attribute: sub
+            jwk-set-uri: https://login.microsoftonline.com/common/discovery/keys
           twitter:
             authorizationUri: https://api.twitter.com/oauth/authorize
             tokenUri: https://api.twitter.com/oauth/access_token

@@ -69,7 +69,7 @@ class LoginView(
                 for (provider in providers)
                 {
                     val button = button(
-                        "Login with ${provider.identifier}"
+                        "Login with ${provider.name}"
                     ) {
                         if (provider.enabled)
                         {
