@@ -15,6 +15,8 @@ class WebsiteUser(
     var firstName = ""
     var lastName = ""
 
+    var aboutMe = ""
+
     var bannerPng: UUID? = null
 
     fun isStaff() = WebsiteUserStaff

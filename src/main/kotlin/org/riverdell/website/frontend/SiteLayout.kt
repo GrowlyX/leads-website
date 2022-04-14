@@ -26,6 +26,7 @@ import org.riverdell.website.frontend.views.PrimaryView
 import org.riverdell.website.frontend.views.SettingsView
 import org.riverdell.website.frontend.views.tutorial.TutorialView
 import org.riverdell.website.frontend.views.tutorial.staff.TutorialCreationView
+import org.riverdell.website.frontend.views.tutorial.staff.TutorialManagementView
 import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
@@ -178,7 +179,7 @@ class SiteLayout(
                     add(MenuEntry(
                         "Manage Tutorials",
                         VaadinIcon.CHART.create(),
-                        TutorialCreationView::class.java
+                        TutorialManagementView::class.java
                     ))
                 }
             }

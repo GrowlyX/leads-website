@@ -32,12 +32,12 @@ import javax.annotation.security.PermitAll
  * @since 4/10/2022
  */
 @Route(
-    value = "staff/tutorials/create",
+    value = "staff/tutorials/manage",
     layout = SiteLayout::class
 )
-@PageTitle("Staff - Tutorial Creation")
+@PageTitle("Staff - Tutorial Management")
 @PermitAll
-class TutorialCreationView(
+class TutorialManagementView(
     private val session: WebsiteUserSession
 ) : KComposite()
 {
@@ -92,10 +92,8 @@ class TutorialCreationView(
                             .apply { require(true) }
 
                         add(
-                            H3("Content")
-                                .apply {
-                                    add(content)
-                                }
+                            H3("Content"),
+                            content
                         )
                     }
                 )
@@ -104,12 +102,12 @@ class TutorialCreationView(
                     horizontalLayout {
                         addClassName("button-layout")
 
-                        this@TutorialCreationView.save.addThemeVariants(
+                        this@TutorialManagementView.save.addThemeVariants(
                             ButtonVariant.LUMO_PRIMARY,
                             ButtonVariant.LUMO_SUCCESS
                         )
 
-                        this@TutorialCreationView.cancel.addThemeVariants(
+                        this@TutorialManagementView.cancel.addThemeVariants(
                             ButtonVariant.LUMO_ERROR
                         )
 
@@ -119,7 +117,7 @@ class TutorialCreationView(
                 )
 
                 binder.bindInstanceFields(
-                    this@TutorialCreationView
+                    this@TutorialManagementView
                 )
                 binder.bean = Tutorial(
                     UUID.randomUUID().toString()

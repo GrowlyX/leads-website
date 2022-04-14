@@ -14,6 +14,7 @@ import com.vaadin.flow.component.notification.Notification
 import com.vaadin.flow.component.notification.NotificationVariant
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.component.textfield.EmailField
+import com.vaadin.flow.component.textfield.TextArea
 import com.vaadin.flow.component.textfield.TextField
 import com.vaadin.flow.component.upload.FileRejectedEvent
 import com.vaadin.flow.component.upload.Upload
@@ -49,6 +50,11 @@ class SettingsView(
 
     private val firstName = TextField("First name", "John")
     private val lastName = TextField("Last name", "Doe")
+
+    private val aboutMe = TextArea(
+        "About me",
+        "22yo software developer. inactive acc, I use a new alias now"
+    )
 
     private val email = EmailField("Email address", "johndoe@riverdell.org")
 
@@ -156,11 +162,17 @@ class SettingsView(
                             valid = true
                         }
 
+                        aboutMe.apply {
+                            this.isClearButtonVisible = true
+                            this.isAutocorrect = true
+                        }
+
                         this.add(
                             username,
                             firstName,
                             lastName,
-                            email
+                            email,
+                            aboutMe
                         )
                     }
                 )

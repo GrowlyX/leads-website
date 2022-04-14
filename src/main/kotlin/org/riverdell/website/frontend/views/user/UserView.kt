@@ -2,6 +2,7 @@ package org.riverdell.website.frontend.views.user
 
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.horizontalLayout
+import com.github.mvysny.karibudsl.v10.text
 import com.vaadin.flow.component.Unit
 import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.html.*
@@ -110,5 +111,12 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
         )
 
         add(horizontal)
+
+        if (user.aboutMe.isNotEmpty())
+        {
+            add(Paragraph().apply {
+                this.text = user.aboutMe
+            })
+        }
     }
 }
