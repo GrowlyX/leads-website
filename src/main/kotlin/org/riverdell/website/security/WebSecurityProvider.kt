@@ -1,8 +1,6 @@
 package org.riverdell.website.security
 
 import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
-import com.vaadin.flow.component.icon.Icon
-import com.vaadin.flow.component.icon.VaadinIcon
 
 /**
  * @author GrowlyX

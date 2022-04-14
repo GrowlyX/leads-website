@@ -9,6 +9,7 @@ object WebsiteUserStaff
     val staffAccess =
         mutableListOf(
             "growlyxdev@gmail.com",
-            "geraldiskewl@gmail.com"
+            "geraldiskewl@gmail.com",
+            "subhamktech@gmail.com"
         )
 }
