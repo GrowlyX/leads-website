@@ -54,17 +54,17 @@ class TutorialView : Main(), HasComponents, HasStyle
         val container = HorizontalLayout()
         container.addClassNames("items-center", "justify-between")
 
-        val headerContainer = VerticalLayout()
+        val verticalLayout = VerticalLayout()
 
         val header = H2("Technology Tutorials")
         header.addClassNames("mb-0", "mt-xl", "text-3xl")
 
         val description = Paragraph(
-            "Something something something - TODO: bobby help change this"
+            "View technology tutorials created by River Dell students!"
         )
         description.addClassNames("mb-xl", "mt-0", "text-secondary")
 
-        headerContainer.add(header, description)
+        verticalLayout.add(header, description)
 
         val available = sorts.keys.toList()
 
@@ -80,7 +80,7 @@ class TutorialView : Main(), HasComponents, HasStyle
             "gap-m", "grid", "list-none", "m-0", "p-0"
         )
 
-        container.add(header, select)
+        container.add(verticalLayout, select)
         add(container, imageContainer)
 
         val cards = mutableListOf<TutorialViewCard>()

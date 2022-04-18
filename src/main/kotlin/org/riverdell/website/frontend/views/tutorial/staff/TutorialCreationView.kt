@@ -42,7 +42,6 @@ class TutorialCreationView(
 ) : KComposite()
 {
     private val titleField = TextField("Title")
-    private val subTitle = TextField("Subtitle")
 
     private val description = TextArea("Description")
     private val image = TextField("Cover Image URL")
@@ -74,12 +73,11 @@ class TutorialCreationView(
                 add(
                     FormLayout().apply {
                         val fields = listOf(
-                            titleField, subTitle, description,
+                            titleField, description,
                             image, labels
                         )
 
                         titleField.isRequired = true
-                        subTitle.isRequired = true
                         description.isRequired = true
                         image.isRequired = true
 

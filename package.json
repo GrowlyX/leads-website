@@ -10,6 +10,7 @@
       "@polymer/iron-meta": "3.0.1",
       "@polymer/iron-resizable-behavior": "3.0.1",
       "@polymer/polymer": "3.4.1",
+      "@vaadin-component-factory/vcf-toggle-button": "1.0.3",
       "@vaadin/accordion": "23.0.3",
       "@vaadin/app-layout": "23.0.3",
       "@vaadin/avatar": "23.0.3",
@@ -143,7 +144,7 @@
       "workbox-precaching": "6.5.0",
       "workbox-webpack-plugin": "6.5.0"
     },
-    "hash": "84eaa3ca417170975f932587c06063d0eca331ca172c070ff4087da6aa7140a7"
+    "hash": "74ddfdb39d29adce5544d52f4092581299dce6a51af4bf29e723f4cf445580bb"
   },
   "dependencies": {
     "@flowingcode/font-awesome-iron-iconset": "3.0.0",
@@ -153,6 +154,7 @@
     "@polymer/iron-meta": "3.0.1",
     "@polymer/iron-resizable-behavior": "3.0.1",
     "@polymer/polymer": "3.4.1",
+    "@vaadin-component-factory/vcf-toggle-button": "1.0.3",
     "@vaadin/accordion": "23.0.3",
     "@vaadin/app-layout": "23.0.3",
     "@vaadin/avatar": "23.0.3",

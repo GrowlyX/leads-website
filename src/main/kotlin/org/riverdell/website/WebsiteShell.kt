@@ -30,7 +30,7 @@ import org.riverdell.website.WebsiteShell.NAME_SHORT
 )
 @Theme(
     value = "leads",
-    variant = Lumo.DARK
+    variant = Lumo.LIGHT
 )
 @PageTitle(META_TITLE)
 object WebsiteShell : AppShellConfigurator

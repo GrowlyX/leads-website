@@ -3,6 +3,8 @@ package org.riverdell.website.frontend.views
 import com.github.mvysny.karibudsl.v10.KComposite
 import com.github.mvysny.karibudsl.v10.div
 import com.github.mvysny.karibudsl.v10.horizontalLayout
+import com.github.mvysny.kaributools.textAlign
+import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.formlayout.FormLayout
@@ -22,6 +24,7 @@ import com.vaadin.flow.component.upload.receivers.FileBuffer
 import com.vaadin.flow.data.binder.Binder
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
+import com.vaadin.flow.theme.lumo.Lumo
 import org.riverdell.website.frontend.SiteLayout
 import org.riverdell.website.users.WebsiteUser
 import org.riverdell.website.users.WebsiteUserRepository
@@ -53,7 +56,7 @@ class SettingsView(
 
     private val aboutMe = TextArea(
         "About me",
-        "22yo software developer. inactive acc, I use a new alias now"
+        "22yo software developer. inactive acc, I use a new alias now."
     )
 
     private val email = EmailField("Email address", "johndoe@riverdell.org")
@@ -192,6 +195,70 @@ class SettingsView(
 
                         add(save)
                         add(cancel)
+                    },
+                    horizontalLayout {
+                        add(
+                            Button().apply {
+                                addThemeVariants(
+                                    ButtonVariant.LUMO_CONTRAST
+                                )
+
+                                var current = UI.getCurrent()
+                                    .element.themeList
+                                    .contains(
+                                        Lumo.DARK
+                                    )
+
+                                text = if (!current)
+                                {
+                                    "Disable dark mode"
+                                } else
+                                {
+                                    "Enable dark mode"
+                                }
+                                textAlign = "center"
+
+                                addClickListener {
+                                    current = UI.getCurrent()
+                                        .element.themeList
+                                        .contains(
+                                            Lumo.DARK
+                                        )
+
+                                    if (!current)
+                                    {
+                                        UI.getCurrent()
+                                            .element.themeList
+                                            .remove(Lumo.LIGHT)
+
+                                        UI.getCurrent()
+                                            .element.themeList
+                                            .add(Lumo.DARK)
+
+                                        binder.bean.darkMode = true
+                                    } else
+                                    {
+                                        UI.getCurrent()
+                                            .element.themeList
+                                            .remove(Lumo.DARK)
+
+                                        UI.getCurrent()
+                                            .element.themeList
+                                            .add(Lumo.LIGHT)
+
+                                        binder.bean.darkMode = false
+                                    }
+
+                                    text = if (!current)
+                                    {
+                                        "Disable dark mode"
+                                    } else
+                                    {
+                                        "Enable dark mode"
+                                    }
+                                }
+                            }
+                        )
                     }
                 )
 

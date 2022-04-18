@@ -1,5 +1,7 @@
 package org.riverdell.website.frontend
 
+import com.github.mvysny.kaributools.textAlign
+import com.vaadin.componentfactory.ToggleButton
 import com.vaadin.flow.component.ClickNotifier
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.UI
@@ -7,6 +9,7 @@ import com.vaadin.flow.component.Unit
 import com.vaadin.flow.component.applayout.AppLayout
 import com.vaadin.flow.component.applayout.DrawerToggle
 import com.vaadin.flow.component.avatar.Avatar
+import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.contextmenu.ContextMenu
 import com.vaadin.flow.component.dependency.JsModule
@@ -19,6 +22,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.server.VaadinServletRequest
+import com.vaadin.flow.theme.lumo.Lumo
 import org.riverdell.website.frontend.menu.MenuEntry
 import org.riverdell.website.frontend.views.LoginView
 import org.riverdell.website.frontend.views.LogoutView
@@ -51,6 +55,35 @@ class SiteLayout(
         addToDrawer(
             createDrawerContent()
         )
+
+        if (userSession.loggedIn())
+        {
+            val user = userSession
+                .getUser().join()
+
+            val current = user.darkMode
+
+            if (current)
+            {
+                UI.getCurrent()
+                    .element.themeList
+                    .remove(Lumo.LIGHT)
+
+                UI.getCurrent()
+                    .element.themeList
+                    .add(Lumo.DARK)
+            } else
+            {
+                UI.getCurrent()
+                    .element.themeList
+                    .remove(Lumo.DARK)
+
+                UI.getCurrent()
+                    .element.themeList
+                    .add(Lumo.LIGHT)
+            }
+        }
+        
 //
 //        val users = WebsiteUserRepository
 //            .repository.retrieveAllAsync()
@@ -113,10 +146,21 @@ class SiteLayout(
                         },
                     Hr()
                 )
+
+                addClickListener {
+                    UI.getCurrent().page.setLocation("/")
+                }
             }
 
-        val section = Section(verticalLayout, createNavbarButtons(), createNavbarFooter())
-        section.addClassNames("drawer-section")
+        val section = Section(
+            verticalLayout,
+            createNavbarButtons(),
+            createNavbarFooter()
+        )
+
+        section.addClassNames(
+            "drawer-section"
+        )
 
         return section
     }
@@ -204,6 +248,11 @@ class SiteLayout(
                 "Home",
                 VaadinIcon.HOME.create(),
                 PrimaryView::class.java
+            ),
+            MenuEntry(
+                "Tutorials",
+                VaadinIcon.GLOBE.create(),
+                TutorialView::class.java
             ),
             Hr(),
             MenuEntry(

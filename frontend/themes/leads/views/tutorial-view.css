@@ -11,3 +11,35 @@
     background-color: var(--lumo-base-color);
     box-shadow: var(--lumo-box-shadow-s);
 }
+
+.labels {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 4px;
+}
+
+.avatar-creator {
+    display: flex;
+    margin-left: 8px;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.avatar-creator li:hover {
+    background-color: var(--lumo-base-color);
+    box-shadow: var(--lumo-box-shadow-s);
+}
+
+.author {
+    margin-top: 12px;
+}
+
+.link {
+    color: #1e81b0;
+    text-decoration: underline;
+}
+
+.link li:hover {
+    cursor: auto;
+    user-select: text;
+}

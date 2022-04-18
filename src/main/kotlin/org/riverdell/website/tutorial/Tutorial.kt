@@ -10,8 +10,7 @@ class Tutorial(
     val author: String
 )
 {
-    var title = ""
-    var subTitle = ""
+    var titleField = ""
     var image = ""
     var content = ""
     var description = ""

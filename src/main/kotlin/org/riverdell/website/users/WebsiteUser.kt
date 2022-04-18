@@ -19,6 +19,8 @@ class WebsiteUser(
 
     var bannerPng: UUID? = null
 
+    var darkMode = false
+
     fun isStaff() = WebsiteUserStaff
         .staffAccess.contains(this.email)
 }

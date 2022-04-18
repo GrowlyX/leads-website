@@ -1,11 +1,14 @@
 package org.riverdell.website.frontend.views.tutorial
 
+import com.github.mvysny.karibudsl.v10.text
 import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.Unit
 import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.html.*
 import org.riverdell.website.tutorial.Tutorial
 import org.riverdell.website.users.WebsiteUserRepository
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * @author GrowlyX
@@ -15,6 +18,12 @@ class TutorialViewCard(
     tutorial: Tutorial
 ) : ListItem()
 {
+    companion object
+    {
+        val dateFormat = SimpleDateFormat("MM/dd/yy")
+        val dateFormatSpecific = SimpleDateFormat("hh:mmaa")
+    }
+
     init
     {
         addClassNames("bg-contrast-5", "flex", "flex-col", "items-start", "p-m", "rounded-l")
@@ -38,13 +47,13 @@ class TutorialViewCard(
         image.setHeight(200F, Unit.PIXELS)
         image.setWidth(350F, Unit.PIXELS)
 
-        image.setAlt(tutorial.title)
+        image.setAlt(tutorial.titleField)
 
         div.add(image)
 
         val header = Span()
         header.addClassNames("text-xl", "font-semibold")
-        header.text = tutorial.title
+        header.text = tutorial.titleField
 
         header.addClickListener {
             UI.getCurrent().page.setLocation("/tutorial/${
@@ -52,9 +61,20 @@ class TutorialViewCard(
             }")
         }
 
+        val created = Date(tutorial.created)
+
         val subtitle = Span()
-        subtitle.addClassNames("text-s", "text-secondary")
-        subtitle.text = tutorial.subTitle
+        subtitle.addClassNames(
+            "text-s", "text-secondary"
+        )
+
+        subtitle.text = "Created on ${
+            dateFormat
+                .format(created)
+        } at ${
+            dateFormatSpecific
+                .format(created)
+        }."
 
         val description = Paragraph(tutorial.description)
         description.addClassName("my-m")
@@ -81,24 +101,26 @@ class TutorialViewCard(
 
         val username = Span()
         username.addClassNames(
-            "font-medium", "text-s", "text-secondary"
+            "text-s", "text-secondary"
         )
-        username.text = "by ${author?.username ?: "???"}"
+        username.text = "Created by "
 
-        authorSpan.add(
-            username,
-            Avatar(author?.username, author?.picture)
+        username.add(
+            Span()
                 .apply {
-                    addClassNames("me-xs")
+                    addClassNames(
+                        "font-medium", "text-s", "text-secondary", "link"
+                    )
+
+                    this.text = author?.username ?: "???"
                 }
         )
 
-        if (author != null)
-        {
-            authorSpan.addClickListener {
-                UI.getCurrent().page.setLocation("/user/${author.username}")
-            }
-        }
+        username.add(".")
+
+        authorSpan.add(
+            username
+        )
 
         add(div, header, subtitle, description, span, authorSpan)
     }
