@@ -84,14 +84,6 @@
   font-size: var(--lumo-font-size-m);
 }
 
-.logo {
-  align-items: center;
-  display: flex;
-  margin: 0;
-  padding-left: var(--lumo-space-m);
-  padding-right: var(--lumo-space-m);
-}
-
 .drawer-section {
   align-items: stretch;
   display: flex;

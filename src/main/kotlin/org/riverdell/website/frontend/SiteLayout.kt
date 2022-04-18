@@ -94,8 +94,11 @@ class SiteLayout(
 
     private fun createDrawerContent(): Component
     {
-        val verticalLayout = Div()
+        val verticalLayout = HorizontalLayout()
             .apply {
+                alignItems = FlexComponent
+                    .Alignment.CENTER
+
                 add(
                     Image("https://nj.vsand-static.com/Logos/4404.png?maxwidth=1100&maxheight=1100", "RiverDell Logo")
                         .apply {

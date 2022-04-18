@@ -21,8 +21,8 @@ class TutorialViewCard(
 
         val div = Div()
         div.addClassNames(
-            "bg-contrast", "flex items-center", "justify-center",
-            "mb-m", "overflow-hidden", "rounded-m w-full"
+            "bg-contrast", "flex items-center", "justify-center", "mb-m", "overflow-hidden",
+            "rounded-m w-full"
         )
         div.height = "160px"
 
@@ -56,18 +56,13 @@ class TutorialViewCard(
         subtitle.addClassNames("text-s", "text-secondary")
         subtitle.text = tutorial.subTitle
 
-        val description = Paragraph(
-            tutorial.description
-        ).apply {
-            addClassNames("text-s", "text-secondary")
-        }
-
-        this.add(div, header, subtitle, description)
+        val description = Paragraph(tutorial.description)
+        description.addClassName("my-m")
 
         val span = Span()
-        span.addClassNames(
-            "labels"
-        )
+            .apply {
+                addClassNames("labels")
+            }
 
         for (label in tutorial.labels.split(", "))
         {
@@ -77,8 +72,6 @@ class TutorialViewCard(
 
             span.add(badge)
         }
-
-        add(span)
 
         val authorSpan = Span()
         authorSpan.addClassNames("author")
@@ -107,6 +100,6 @@ class TutorialViewCard(
             }
         }
 
-        add(authorSpan)
+        add(div, header, subtitle, description, span, authorSpan)
     }
 }
