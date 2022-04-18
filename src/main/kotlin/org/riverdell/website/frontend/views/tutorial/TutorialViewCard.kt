@@ -59,7 +59,7 @@ class TutorialViewCard(
         val description = Paragraph(
             tutorial.description
         ).apply {
-            addClassName("my-m")
+            addClassNames("text-s", "text-secondary")
         }
 
         this.add(div, header, subtitle, description)

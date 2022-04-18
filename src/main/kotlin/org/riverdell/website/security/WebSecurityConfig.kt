@@ -23,7 +23,8 @@ open class WebSecurityConfig : VaadinWebSecurityConfigurerAdapter()
         super.configure(http)
 
         http.oauth2Login()
-            .loginPage("/")
+            .loginPage("/login")
+            .failureUrl("/")
             .permitAll()
     }
 }

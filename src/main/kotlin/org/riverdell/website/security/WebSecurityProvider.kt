@@ -13,8 +13,11 @@ enum class WebSecurityProvider(
     Google,
     Facebook,
     Discord,
-    Microsoft,
+
     // disabled
+    Microsoft(
+        enabled = false
+    ),
     Twitter(
         enabled = false
     ),
