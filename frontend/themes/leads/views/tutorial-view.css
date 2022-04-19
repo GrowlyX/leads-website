@@ -25,7 +25,7 @@
     border-radius: 25px;
 }
 
-.avatar-creator li:hover {
+.avatar-creator:hover {
     background-color: var(--lumo-base-color);
     box-shadow: var(--lumo-box-shadow-s);
 }
@@ -39,7 +39,12 @@
     text-decoration: underline;
 }
 
-.link li:hover {
-    cursor: auto;
-    user-select: text;
+.admin {
+    color: #ff1d1d;
+    font-weight: bold;
+}
+
+.staff {
+    color: #2cc5ea;
+    font-style: italic;
 }

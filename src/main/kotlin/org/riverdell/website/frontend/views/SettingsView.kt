@@ -8,6 +8,7 @@ import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.formlayout.FormLayout
+import com.vaadin.flow.component.html.H2
 import com.vaadin.flow.component.html.H3
 import com.vaadin.flow.component.html.Paragraph
 import com.vaadin.flow.component.html.Span
@@ -58,8 +59,6 @@ class SettingsView(
         "About me",
         "22yo software developer. inactive acc, I use a new alias now."
     )
-
-    private val email = EmailField("Email address", "johndoe@riverdell.org")
 
     private val cancel = Button("Cancel")
     private val save = Button("Save")
@@ -122,8 +121,6 @@ class SettingsView(
 
                 add(
                     FormLayout().apply {
-                        email.errorMessage = "Please enter a valid email."
-
                         username.addValueChangeListener { field ->
                             if (!firstCheck)
                             {
@@ -131,11 +128,19 @@ class SettingsView(
                                 return@addValueChangeListener
                             }
 
-                            if (field.value.length < 16)
+                            if (field.value.length < 5)
                             {
                                 valid = false
 
-                                Notification.show("This username is not 16 characters long!")
+                                Notification.show("This username is not 5 characters long!")
+                                return@addValueChangeListener
+                            }
+
+                            if (field.value.length > 16)
+                            {
+                                valid = false
+
+                                Notification.show("This username is is too long!")
                                 return@addValueChangeListener
                             }
 
@@ -174,7 +179,6 @@ class SettingsView(
                             username,
                             firstName,
                             lastName,
-                            email,
                             aboutMe
                         )
                     }
@@ -195,99 +199,108 @@ class SettingsView(
 
                         add(save)
                         add(cancel)
-                    },
-                    horizontalLayout {
-                        add(
-                            Button().apply {
-                                addThemeVariants(
-                                    ButtonVariant.LUMO_CONTRAST
-                                )
-
-                                var current = UI.getCurrent()
-                                    .element.themeList
-                                    .contains(
-                                        Lumo.DARK
-                                    )
-
-                                text = if (!current)
-                                {
-                                    "Disable dark mode"
-                                } else
-                                {
-                                    "Enable dark mode"
-                                }
-                                textAlign = "center"
-
-                                addClickListener {
-                                    current = UI.getCurrent()
-                                        .element.themeList
-                                        .contains(
-                                            Lumo.DARK
-                                        )
-
-                                    if (!current)
-                                    {
-                                        UI.getCurrent()
-                                            .element.themeList
-                                            .remove(Lumo.LIGHT)
-
-                                        UI.getCurrent()
-                                            .element.themeList
-                                            .add(Lumo.DARK)
-
-                                        binder.bean.darkMode = true
-                                    } else
-                                    {
-                                        UI.getCurrent()
-                                            .element.themeList
-                                            .remove(Lumo.DARK)
-
-                                        UI.getCurrent()
-                                            .element.themeList
-                                            .add(Lumo.LIGHT)
-
-                                        binder.bean.darkMode = false
-                                    }
-
-                                    text = if (!current)
-                                    {
-                                        "Disable dark mode"
-                                    } else
-                                    {
-                                        "Enable dark mode"
-                                    }
-                                }
-                            }
-                        )
                     }
                 )
 
-                add(
-                    VerticalLayout(
-                        H3("Banner"),
-                        Paragraph("Upload a custom profile banner for other users to see."),
-                        upload,
-                        Button("Reset your Banner")
-                            .apply {
-                                addThemeVariants(
-                                    ButtonVariant.LUMO_ERROR
-                                )
+                // ,
+                //                    horizontalLayout {
+                //                        add(
+                //                            Button().apply {
+                //                                addThemeVariants(
+                //                                    ButtonVariant.LUMO_CONTRAST
+                //                                )
+                //
+                //                                var current = UI.getCurrent()
+                //                                    .element.themeList
+                //                                    .contains(
+                //                                        Lumo.DARK
+                //                                    )
+                //
+                //                                text = if (!current)
+                //                                {
+                //                                    "Disable dark mode"
+                //                                } else
+                //                                {
+                //                                    "Enable dark mode"
+                //                                }
+                //                                textAlign = "center"
+                //
+                //                                addClickListener {
+                //                                    current = UI.getCurrent()
+                //                                        .element.themeList
+                //                                        .contains(
+                //                                            Lumo.DARK
+                //                                        )
+                //
+                //                                    if (!current)
+                //                                    {
+                //                                        UI.getCurrent()
+                //                                            .element.themeList
+                //                                            .remove(Lumo.LIGHT)
+                //
+                //                                        UI.getCurrent()
+                //                                            .element.themeList
+                //                                            .add(Lumo.DARK)
+                //
+                //                                        binder.bean.darkMode = true
+                //                                    } else
+                //                                    {
+                //                                        UI.getCurrent()
+                //                                            .element.themeList
+                //                                            .remove(Lumo.DARK)
+                //
+                //                                        UI.getCurrent()
+                //                                            .element.themeList
+                //                                            .add(Lumo.LIGHT)
+                //
+                //                                        binder.bean.darkMode = false
+                //                                    }
+                //
+                //                                    text = if (!current)
+                //                                    {
+                //                                        "Disable dark mode"
+                //                                    } else
+                //                                    {
+                //                                        "Enable dark mode"
+                //                                    }
+                //                                }
+                //                            }
+                //                        )
+                //                    }
 
-                                addClickListener {
-                                    binder.bean.bannerPng = null
+                val header = H3("Banner")
+                header.addClassNames("mb-0", "mt-xl", "text-3xl")
 
-                                    Notification.show(
-                                        "Your banner has been reset!"
-                                    )
-                                }
-                            }
-                    )
+                val description = Paragraph(
+                    "Upload a custom profile banner for other users to see."
                 )
+                description.addClassNames("mb-xl", "mt-0", "text-secondary")
 
                 binder.bindInstanceFields(
                     this@SettingsView
                 )
                 binder.bean = session.getUser().join()
+
+                add(
+                    VerticalLayout().apply {
+                        add(
+                            header, description, upload, Button("Reset your Banner")
+                                .apply {
+                                    addThemeVariants(
+                                        ButtonVariant.LUMO_ERROR
+                                    )
+
+                                    addClickListener {
+                                        binder.bean.bannerPng = null
+
+                                        Notification.show(
+                                            "Your banner has been reset!"
+                                        )
+                                    }
+                                }
+                        )
+                    }
+                )
 
                 cancel.addClickListener {
                     binder.bean = session.getUser().join()

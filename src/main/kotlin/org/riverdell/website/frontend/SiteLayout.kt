@@ -1,5 +1,10 @@
 package org.riverdell.website.frontend
 
+import com.flowingcode.vaadin.addons.fontawesome.FontAwesome
+import com.github.mvysny.karibudsl.v10.contextMenu
+import com.github.mvysny.karibudsl.v10.onLeftClick
+import com.github.mvysny.kaributools.IconName
+import com.github.mvysny.kaributools.iconName
 import com.github.mvysny.kaributools.textAlign
 import com.vaadin.componentfactory.ToggleButton
 import com.vaadin.flow.component.ClickNotifier
@@ -17,10 +22,12 @@ import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.html.*
 import com.vaadin.flow.component.icon.IronIcon
 import com.vaadin.flow.component.icon.VaadinIcon
+import com.vaadin.flow.component.notification.Notification
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.PageTitle
+import com.vaadin.flow.router.RouterLink
 import com.vaadin.flow.server.VaadinServletRequest
 import com.vaadin.flow.theme.lumo.Lumo
 import org.riverdell.website.frontend.menu.MenuEntry
@@ -31,6 +38,8 @@ import org.riverdell.website.frontend.views.SettingsView
 import org.riverdell.website.frontend.views.tutorial.TutorialView
 import org.riverdell.website.frontend.views.tutorial.staff.TutorialCreationView
 import org.riverdell.website.frontend.views.tutorial.staff.TutorialManagementView
+import org.riverdell.website.users.WebsiteUserRepository
+import org.riverdell.website.users.WebsiteUserRole
 import org.riverdell.website.users.WebsiteUserSession
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 
@@ -56,34 +65,39 @@ class SiteLayout(
             createDrawerContent()
         )
 
-        if (userSession.loggedIn())
-        {
-            val user = userSession
-                .getUser().join()
-
-            val current = user.darkMode
-
-            if (current)
+        addAttachListener {
+            if (it.isInitialAttach)
             {
-                UI.getCurrent()
-                    .element.themeList
-                    .remove(Lumo.LIGHT)
+                if (userSession.loggedIn())
+                {
+                    val user = userSession
+                        .getUser().join()
 
-                UI.getCurrent()
-                    .element.themeList
-                    .add(Lumo.DARK)
-            } else
-            {
-                UI.getCurrent()
-                    .element.themeList
-                    .remove(Lumo.DARK)
+                    val current = user.darkMode
 
-                UI.getCurrent()
-                    .element.themeList
-                    .add(Lumo.LIGHT)
+                    if (current)
+                    {
+                        UI.getCurrent()
+                            .element.themeList
+                            .remove(Lumo.LIGHT)
+
+                        UI.getCurrent()
+                            .element.themeList
+                            .add(Lumo.DARK)
+                    } else
+                    {
+                        UI.getCurrent()
+                            .element.themeList
+                            .remove(Lumo.DARK)
+
+                        UI.getCurrent()
+                            .element.themeList
+                            .add(Lumo.LIGHT)
+                    }
+                }
             }
         }
-        
+
 //
 //        val users = WebsiteUserRepository
 //            .repository.retrieveAllAsync()
@@ -215,7 +229,7 @@ class SiteLayout(
                     TutorialView::class.java
                 )
             ).apply {
-                if (user.isStaff())
+                if (user.role over WebsiteUserRole.STAFF)
                 {
                     add(Hr())
                     add(MenuEntry(
@@ -228,6 +242,15 @@ class SiteLayout(
                         VaadinIcon.CHART.create(),
                         TutorialManagementView::class.java
                     ))
+
+                    addAttachListener {
+                        if (it.isInitialAttach && user.role over WebsiteUserRole.STAFF)
+                        {
+                            Notification.show("You have staff status! Your role is: ${
+                                user.role.display
+                            }.")
+                        }
+                    }
                 }
             }
             .apply {
@@ -271,7 +294,7 @@ class SiteLayout(
         if (!userSession.loggedIn())
         {
             val loginLink = Anchor(
-                "/login", "Click to login"
+                "/login", "Click to login!"
             )
 
             loginLink.element.setAttribute(
@@ -289,14 +312,63 @@ class SiteLayout(
         )
 
         avatar.addClassNames("me-xs")
-        attachContextMenu(avatar)
 
         val name = Span(user.username)
 
         name.addClassNames(
-            "font-medium", "text-s", "text-secondary"
+            "font-medium", "text-s", "text-secondary", "bold"
         )
-        layout.add(avatar, name)
+
+        var current = UI.getCurrent()
+            .element.themeList
+            .contains(
+                Lumo.DARK
+            )
+
+        layout.add(avatar, name, (if (current) VaadinIcon.MOON.create() else VaadinIcon.SUN_O.create()).apply {
+            addClassNames("dark-mode-switch")
+
+            onLeftClick {
+                current = UI.getCurrent()
+                    .element.themeList
+                    .contains(
+                        Lumo.DARK
+                    )
+
+                if (!current)
+                {
+                    UI.getCurrent()
+                        .element.themeList
+                        .remove(Lumo.LIGHT)
+
+                    UI.getCurrent()
+                        .element.themeList
+                        .add(Lumo.DARK)
+
+                    user.darkMode = true
+                } else
+                {
+                    UI.getCurrent()
+                        .element.themeList
+                        .remove(Lumo.DARK)
+
+                    UI.getCurrent()
+                        .element.themeList
+                        .add(Lumo.LIGHT)
+
+                    user.darkMode = false
+                }
+
+                this.iconName = IconName.of(
+                    if (!current) VaadinIcon.MOON else VaadinIcon.SUN_O
+                )
+
+                WebsiteUserRepository.repository
+                    .storeAsync(user.email, user)
+            }
+        }, attachContextMenu(VaadinIcon.COG.create().apply {
+            addClassNames("settings-gear")
+        }))
 
         return layout
     }
@@ -319,9 +391,9 @@ class SiteLayout(
     }
 
     // Attaches context menu to avatar
-    private fun attachContextMenu(avatar: Avatar)
+    private fun attachContextMenu(icon: com.vaadin.flow.component.icon.Icon): com.vaadin.flow.component.icon.Icon
     {
-        val contextMenu = ContextMenu(avatar)
+        val contextMenu = ContextMenu(icon)
         contextMenu.isOpenOnClick = true
 
         contextMenu.addItem("Options") {
@@ -346,6 +418,8 @@ class SiteLayout(
                 null, null
             )
         }
+
+        return icon
     }
 
     // Updates title when user navigates

@@ -6,6 +6,7 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal
 import org.springframework.stereotype.Component
 import org.springframework.web.context.annotation.SessionScope
 import java.util.concurrent.CompletableFuture
+import javax.management.Notification
 import kotlin.random.Random
 
 /**
@@ -46,6 +47,8 @@ open class WebsiteUserSession
                 name.replace(" ", "+")
             }"
 
+
+
         return WebsiteUserRepository
             .getOrCreate(email, name, picture)
             .thenApply {
@@ -54,6 +57,29 @@ open class WebsiteUserSession
                     ?: ""
 
                 it.aboutMe = description
+
+                if (
+                    WebsiteUserAdmins
+                        .administrators
+                        .contains(email)
+                )
+                {
+                    it.role = WebsiteUserRole.ADMIN
+                } else if (
+                    WebsiteUserAdmins
+                        .staff
+                        .contains(email)
+                )
+                {
+                    it.role = WebsiteUserRole.STAFF
+                }
+
+                if (it.role over WebsiteUserRole.STAFF)
+                {
+                    WebsiteUserRepository.repository
+                        .storeAsync(it.email, it)
+                }
+
                 return@thenApply it
             }
     }

@@ -39,9 +39,11 @@ class TutorialViewCard(
         image.src = tutorial.image
 
         image.addClickListener {
-            UI.getCurrent().page.setLocation("/tutorial/${
-                tutorial.uniqueId
-            }")
+            UI.getCurrent().page.setLocation(
+                "/tutorial/${
+                    tutorial.uniqueId
+                }"
+            )
         }
 
         image.setHeight(200F, Unit.PIXELS)
@@ -51,15 +53,13 @@ class TutorialViewCard(
 
         div.add(image)
 
-        val header = Span()
+        val header = Anchor(
+            "/tutorial/${
+                tutorial.uniqueId
+            }"
+        )
         header.addClassNames("text-xl", "font-semibold")
         header.text = tutorial.titleField
-
-        header.addClickListener {
-            UI.getCurrent().page.setLocation("/tutorial/${
-                tutorial.uniqueId
-            }")
-        }
 
         val created = Date(tutorial.created)
 
@@ -106,14 +106,23 @@ class TutorialViewCard(
         username.text = "Created by "
 
         username.add(
-            Span()
-                .apply {
-                    addClassNames(
-                        "font-medium", "text-s", "text-secondary", "link"
-                    )
+            (if (author == null) Span() else Anchor(
+                "/user/${author.username}"
+            )).apply {
+                addClassNames(
+                    "font-medium", "text-s", "text-secondary"
+                )
 
-                    this.text = author?.username ?: "???"
+                if (author != null)
+                {
+                    addClassNames(author.role.name.lowercase())
+                } else
+                {
+                    addClassNames("link")
                 }
+
+                this.text = author?.username ?: "???"
+            }
         )
 
         username.add(".")
