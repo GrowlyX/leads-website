@@ -7,6 +7,7 @@ gradle.properties
 
 # Resources
 resources/banners/*.png
+resources/profiles/*.png
 
 # Mac
 .DS_Store

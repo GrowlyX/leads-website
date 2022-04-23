@@ -30,6 +30,7 @@ import org.riverdell.website.frontend.SiteLayout
 import org.riverdell.website.users.WebsiteUser
 import org.riverdell.website.users.WebsiteUserRepository
 import org.riverdell.website.users.WebsiteUserSession
+import org.riverdell.website.users.social.WebsiteUserSocialMedia
 import java.io.File
 import java.nio.file.Files
 import java.util.UUID
@@ -74,7 +75,7 @@ class SettingsView(
                 addClassName("about-view")
 
                 add(
-                    H3("Your Settings")
+                    H3("Profile")
                 )
 
                 val fileBuffer = FileBuffer()
@@ -98,12 +99,16 @@ class SettingsView(
                 }
 
                 upload.addFinishedListener {
-                    val uniqueId = UUID.randomUUID()
+                    val uniqueId = binder.bean.bannerPng
+                        ?: UUID.randomUUID()
 
                     val file = File(
                         "resources/banners",
                         "$uniqueId.png"
                     )
+
+                    if (file.exists())
+                        file.delete()
 
                     Files.copy(
                         fileBuffer.inputStream,
@@ -111,9 +116,52 @@ class SettingsView(
                     )
 
                     binder.bean.bannerPng = uniqueId
+                    binder.bean.saveNow()
 
                     Notification.show(
                         "Your banner has been saved!"
+                    )
+                }
+
+                val uploadPfp = Upload(fileBuffer)
+                uploadPfp.setAcceptedFileTypes("image/png", ".png")
+
+                uploadPfp.maxFileSize = maxFileSizeInBytes
+                uploadPfp.isDropAllowed = true
+
+                uploadPfp.addFileRejectedListener { event: FileRejectedEvent ->
+                    val errorMessage = event.errorMessage
+                    val notification =
+                        Notification.show(
+                            errorMessage,
+                            5000,
+                            Notification.Position.MIDDLE
+                        )
+                    notification.addThemeVariants(NotificationVariant.LUMO_ERROR)
+                }
+
+                uploadPfp.addFinishedListener {
+                    val uniqueId = binder.bean.profilePng
+                        ?: UUID.randomUUID()
+
+                    val file = File(
+                        "resources/profiles",
+                        "$uniqueId.png"
+                    )
+
+                    if (file.exists())
+                        file.delete()
+
+                    Files.copy(
+                        fileBuffer.inputStream,
+                        file.toPath()
+                    )
+
+                    binder.bean.profilePng = uniqueId
+                    binder.bean.saveNow()
+
+                    Notification.show(
+                        "Your profile picture has been saved!"
                     )
                 }
 
@@ -184,6 +232,37 @@ class SettingsView(
                     }
                 )
 
+                binder.bean = session.getUser().join()
+
+                add(
+                    H3("Social Media")
+                )
+
+                add(
+                    FormLayout().apply {
+                        WebsiteUserSocialMedia.values().forEach { media ->
+                            add(
+                                TextField(
+                                    media.fancy,
+                                    String.format(media.template, "johndoe")
+                                ).apply {
+                                    val current = binder
+                                        .bean.socialMedia[media]
+
+                                    if (current != null)
+                                    {
+                                        value = current
+                                    }
+
+                                    addValueChangeListener {
+                                        binder.bean.socialMedia[media] = it.value
+                                    }
+                                }
+                            )
+                        }
+                    }
+                )
+
                 add(
                     horizontalLayout {
                         addClassName("button-layout")
@@ -202,72 +281,6 @@ class SettingsView(
                     }
                 )
 
-                // ,
-                //                    horizontalLayout {
-                //                        add(
-                //                            Button().apply {
-                //                                addThemeVariants(
-                //                                    ButtonVariant.LUMO_CONTRAST
-                //                                )
-                //
-                //                                var current = UI.getCurrent()
-                //                                    .element.themeList
-                //                                    .contains(
-                //                                        Lumo.DARK
-                //                                    )
-                //
-                //                                text = if (!current)
-                //                                {
-                //                                    "Disable dark mode"
-                //                                } else
-                //                                {
-                //                                    "Enable dark mode"
-                //                                }
-                //                                textAlign = "center"
-                //
-                //                                addClickListener {
-                //                                    current = UI.getCurrent()
-                //                                        .element.themeList
-                //                                        .contains(
-                //                                            Lumo.DARK
-                //                                        )
-                //
-                //                                    if (!current)
-                //                                    {
-                //                                        UI.getCurrent()
-                //                                            .element.themeList
-                //                                            .remove(Lumo.LIGHT)
-                //
-                //                                        UI.getCurrent()
-                //                                            .element.themeList
-                //                                            .add(Lumo.DARK)
-                //
-                //                                        binder.bean.darkMode = true
-                //                                    } else
-                //                                    {
-                //                                        UI.getCurrent()
-                //                                            .element.themeList
-                //                                            .remove(Lumo.DARK)
-                //
-                //                                        UI.getCurrent()
-                //                                            .element.themeList
-                //                                            .add(Lumo.LIGHT)
-                //
-                //                                        binder.bean.darkMode = false
-                //                                    }
-                //
-                //                                    text = if (!current)
-                //                                    {
-                //                                        "Disable dark mode"
-                //                                    } else
-                //                                    {
-                //                                        "Enable dark mode"
-                //                                    }
-                //                                }
-                //                            }
-                //                        )
-                //                    }
-
                 val header = H3("Banner")
                 header.addClassNames("mb-0", "mt-xl", "text-3xl")
 
@@ -276,13 +289,20 @@ class SettingsView(
                 )
                 description.addClassNames("mb-xl", "mt-0", "text-secondary")
 
+                val headerPfp = H3("Profile Picture")
+                headerPfp.addClassNames("mb-0", "mt-xl", "text-3xl")
+
+                val descriptionPfp = Paragraph(
+                    "Upload a custom profile picture for other users to see."
+                )
+                descriptionPfp.addClassNames("mb-xl", "mt-0", "text-secondary")
+
                 binder.bindInstanceFields(
                     this@SettingsView
                 )
-                binder.bean = session.getUser().join()
 
                 add(
-                    VerticalLayout().apply {
+                    Span().apply {
                         add(
                             header, description, upload, Button("Reset your Banner")
                                 .apply {
@@ -295,6 +315,24 @@ class SettingsView(
 
                                         Notification.show(
                                             "Your banner has been reset!"
+                                        )
+                                    }
+                                }
+                        )
+                    },
+                    Span().apply {
+                        add(
+                            headerPfp, descriptionPfp, uploadPfp, Button("Reset your Profile Picture")
+                                .apply {
+                                    addThemeVariants(
+                                        ButtonVariant.LUMO_ERROR
+                                    )
+
+                                    addClickListener {
+                                        binder.bean.profilePng = null
+
+                                        Notification.show(
+                                            "Your profile picture has been reset!"
                                         )
                                     }
                                 }

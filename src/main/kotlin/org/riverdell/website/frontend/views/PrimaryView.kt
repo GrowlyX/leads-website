@@ -72,7 +72,9 @@ class PrimaryView(
                 )
 
                 val avatar = Avatar(
-                    user.username, user.picture
+                    user.username,
+                    if (user.profilePng == null)
+                        user.picture else "resources/profiles/${user.profilePng}"
                 )
 
                 val button = button("Logout") {

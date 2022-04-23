@@ -47,8 +47,6 @@ open class WebsiteUserSession
                 name.replace(" ", "+")
             }"
 
-
-
         return WebsiteUserRepository
             .getOrCreate(email, name, picture)
             .thenApply {

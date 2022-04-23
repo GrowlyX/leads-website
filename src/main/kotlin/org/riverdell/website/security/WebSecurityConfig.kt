@@ -1,12 +1,11 @@
 package org.riverdell.website.security
 
 import com.vaadin.flow.spring.security.VaadinWebSecurityConfigurerAdapter
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Configuration
-import org.springframework.security.config.Customizer
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.builders.WebSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-import org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurer
+
 
 /**
  * @author GrowlyX
@@ -26,5 +25,16 @@ open class WebSecurityConfig : VaadinWebSecurityConfigurerAdapter()
             .loginPage("/login")
             .failureUrl("/")
             .permitAll()
+    }
+
+    override fun configure(web: WebSecurity)
+    {
+        super.configure(web)
+        web.ignoring()
+            .antMatchers(
+                "/resources/banners/*.png",
+                "/resources/static/*.png",
+                "/resources/pictures/*.png"
+            )
     }
 }

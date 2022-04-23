@@ -72,4 +72,37 @@ open class ResourceController
             )
         }
     }
+
+    @GetMapping("/resources/profiles/{uuid}")
+    fun getProfilePicture(
+        @PathVariable("uuid") uuid: String,
+        response: HttpServletResponse
+    )
+    {
+        val uniqueId = kotlin.runCatching {
+            UUID.fromString(uuid)
+        }.getOrElse {
+            nonExistent
+        }
+
+        if (uniqueId == nonExistent)
+        {
+            return
+        }
+
+        val banner = File(
+            "resources/profiles",
+            "$uniqueId.png"
+        )
+
+        if (banner.exists())
+        {
+            response.contentType = "image/png"
+
+            IOUtils.copy(
+                banner.inputStream(),
+                response.outputStream
+            )
+        }
+    }
 }

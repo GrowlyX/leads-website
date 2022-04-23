@@ -308,7 +308,9 @@ class SiteLayout(
         val user = userSession.getUser().join()
 
         val avatar = Avatar(
-            user.username, user.picture
+            user.username,
+            if (user.profilePng == null)
+                user.picture else "resources/profiles/${user.profilePng}"
         )
 
         avatar.addClassNames("me-xs")

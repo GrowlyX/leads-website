@@ -25,6 +25,9 @@ object WebsiteUserRepository
                         email, firstName, picture
                     )
 
+                    user.firstLogin =
+                        System.currentTimeMillis()
+
                     this.repository.store(
                         email, user
                     )

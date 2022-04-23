@@ -1,4 +1,7 @@
 @import url('./main-layout.css');
+
 @import url('./views/tutorial-view.css');
 @import url('./views/about-view.css');
+@import url('./views/profile-view.css');
+
 @import url('line-awesome/dist/line-awesome/css/line-awesome.min.css');
