@@ -44,6 +44,9 @@ object WebsiteShell : AppShellConfigurator
         settings: AppShellSettings
     )
     {
+        settings.addFavIcon("icon", "icons/icon-192.png", "192x192")
+        settings.addLink("shortcut icon", "icons/favicon.ico")
+
         settings.addMetaTag("og:title", "RD Leads")
         settings.addMetaTag("og:description", "Something something something")
     }

@@ -33,7 +33,8 @@ open class WebSecurityConfig : VaadinWebSecurityConfigurerAdapter()
             .antMatchers(
                 "/resources/banners/*",
                 "/resources/static/*",
-                "/resources/profiles/*"
+                "/resources/profiles/*",
+                "/icons/*"
             )
     }
 }
