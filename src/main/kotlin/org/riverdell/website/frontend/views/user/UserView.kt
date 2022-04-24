@@ -93,7 +93,7 @@ class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, Composi
             // maintain aspect ratio
             setHeight(350F, Unit.PIXELS)
         }.apply {
-            this@UserView.add(this)
+            this@UserView.add(this, Hr())
         }
 
         val container = HorizontalLayout()
