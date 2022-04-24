@@ -4,6 +4,7 @@ import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.Unit
 import com.vaadin.flow.component.details.Details
 import com.vaadin.flow.component.html.*
+import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.BeforeEnterEvent
@@ -83,6 +84,9 @@ class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, Composi
             "mx-auto", "pb-l", "px-l"
         )
 
+        alignItems = FlexComponent
+            .Alignment.CENTER
+
         Image(
             if (user.bannerPng == null)
                 static else "resources/banners/${user.bannerPng}",
@@ -93,7 +97,7 @@ class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, Composi
             // maintain aspect ratio
             setHeight(350F, Unit.PIXELS)
         }.apply {
-            this@UserView.add(this, Hr())
+            this@UserView.add(this)
         }
 
         val container = HorizontalLayout()
