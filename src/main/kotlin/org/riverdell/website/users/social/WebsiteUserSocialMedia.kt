@@ -11,5 +11,5 @@ enum class WebsiteUserSocialMedia(
 {
     TWITTER("Twitter", "https://twitter.com/%s"),
     GITHUB("GitHub", "https://github.com/%s"),
-    WEBSITE("Website", "")
+    WEBSITE("Website", "%s")
 }
