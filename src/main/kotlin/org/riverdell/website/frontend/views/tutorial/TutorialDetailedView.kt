@@ -11,6 +11,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import com.vaadin.flow.router.BeforeEnterEvent
 import com.vaadin.flow.router.BeforeEnterObserver
+import com.vaadin.flow.router.HasDynamicTitle
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
@@ -34,9 +35,8 @@ import java.util.*
     value = "tutorial/:tutorial",
     layout = SiteLayout::class
 )
-@PageTitle("Viewing tutorial...")
 @AnonymousAllowed
-class TutorialDetailedView : Main(), HasComponents, HasStyle, CompositeLoader<String>, BeforeEnterObserver
+class TutorialDetailedView : Main(), HasComponents, HasStyle, HasDynamicTitle, CompositeLoader<String>, BeforeEnterObserver
 {
     private val dateFormat = SimpleDateFormat("d MMMM y")
 
@@ -44,6 +44,11 @@ class TutorialDetailedView : Main(), HasComponents, HasStyle, CompositeLoader<St
         "nothing@nothing.gg",
         "???", "https://www.kindpng.com/picc/m/22-223930_avatar-person-neutral-man-blank-face-buddy-facebook.png"
     )
+
+    private var dynamicTitle = "Loading..."
+
+    override fun getPageTitle() =
+        this.dynamicTitle
 
     override fun beforeEnter(
         event: BeforeEnterEvent
@@ -80,6 +85,9 @@ class TutorialDetailedView : Main(), HasComponents, HasStyle, CompositeLoader<St
             )
             return
         }
+
+        this.dynamicTitle =
+            tutorial.titleField
 
         addClassNames(
             "max-w-screen-lg", "mx-auto", "pb-l", "px-l"
