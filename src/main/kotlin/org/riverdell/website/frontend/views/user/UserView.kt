@@ -84,9 +84,6 @@ class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, Composi
             "mx-auto", "pb-l", "px-l"
         )
 
-        alignItems = FlexComponent
-            .Alignment.CENTER
-
         Image(
             if (user.bannerPng == null)
                 static else "resources/banners/${user.bannerPng}",
