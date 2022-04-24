@@ -85,8 +85,6 @@ class TutorialDetailedView : Main(), HasComponents, HasStyle, CompositeLoader<St
             "max-w-screen-lg", "mx-auto", "pb-l", "px-l"
         )
 
-
-
         Image(
             tutorial.image,
             "Cover Image"
@@ -106,6 +104,9 @@ class TutorialDetailedView : Main(), HasComponents, HasStyle, CompositeLoader<St
         container.addClassNames("items-center", "justify-between")
 
         val verticalLayout = VerticalLayout()
+            .apply {
+                isPadding = false
+            }
 
         val header = H2(tutorial.titleField)
         header.addClassNames("mb-0", "mt-xl", "text-3xl")
