@@ -1,19 +1,14 @@
 package org.riverdell.website.frontend.views.user
 
-import com.github.mvysny.karibudsl.v10.*
-import com.openhtmltopdf.css.parser.property.PrimitivePropertyBuilders.VerticalAlign
 import com.vaadin.flow.component.Component
-import com.vaadin.flow.component.Text
 import com.vaadin.flow.component.Unit
-import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.details.Details
 import com.vaadin.flow.component.html.*
-import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
-import com.vaadin.flow.component.select.Select
 import com.vaadin.flow.router.BeforeEnterEvent
 import com.vaadin.flow.router.BeforeEnterObserver
+import com.vaadin.flow.router.HasDynamicTitle
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 import com.vaadin.flow.server.auth.AnonymousAllowed
@@ -22,7 +17,6 @@ import org.riverdell.website.frontend.views.tutorial.TutorialViewCard
 import org.riverdell.website.loader.CompositeLoader
 import org.riverdell.website.tutorial.TutorialRepository
 import org.riverdell.website.users.WebsiteUserRepository
-import org.riverdell.website.users.WebsiteUserSession
 
 /**
  * @author GrowlyX
@@ -32,11 +26,15 @@ import org.riverdell.website.users.WebsiteUserSession
     value = "user/:username",
     layout = SiteLayout::class
 )
-@PageTitle("Viewing user profile...")
 @AnonymousAllowed
-class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
+class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, CompositeLoader<String>
 {
     private val static = "resources/static/default_banner.png"
+
+    private var dynamicTitle = "Loading..."
+
+    override fun getPageTitle() =
+        this.dynamicTitle
 
     override fun beforeEnter(
         event: BeforeEnterEvent
@@ -77,6 +75,8 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
             )
             return
         }
+
+        this.dynamicTitle = "User - ${user.username}"
 
         addClassNames(
             "tutorials-view", "max-w-screen-lg",
