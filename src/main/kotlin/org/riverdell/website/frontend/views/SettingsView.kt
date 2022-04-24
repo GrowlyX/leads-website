@@ -83,7 +83,7 @@ class SettingsView(
                 val upload = Upload(fileBuffer)
                 upload.setAcceptedFileTypes("image/png", ".png")
 
-                val maxFileSizeInBytes = 10 * 1024 * 1024 // 2MB
+                val maxFileSizeInBytes = 10 * 1024 * 1024
                 upload.maxFileSize = maxFileSizeInBytes
                 upload.isDropAllowed = true
 
@@ -310,6 +310,8 @@ class SettingsView(
                                         ButtonVariant.LUMO_ERROR
                                     )
 
+                                    addClassNames("button-reset")
+
                                     addClickListener {
                                         binder.bean.bannerPng = null
 
@@ -327,6 +329,8 @@ class SettingsView(
                                     addThemeVariants(
                                         ButtonVariant.LUMO_ERROR
                                     )
+
+                                    addClassNames("button-reset")
 
                                     addClickListener {
                                         binder.bean.profilePng = null

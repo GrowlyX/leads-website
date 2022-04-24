@@ -2,6 +2,23 @@
   border-radius: 75px;
 }
 
+.profile-picture-small {
+  border-radius: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .banner {
-  border-radius: 7px;
+  border-radius: 5px;
+}
+
+.banner-margin {
+  margin: auto;
+}
+
+.button-reset {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }

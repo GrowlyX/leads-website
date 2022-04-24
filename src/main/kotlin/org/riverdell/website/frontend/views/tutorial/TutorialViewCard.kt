@@ -1,9 +1,7 @@
 package org.riverdell.website.frontend.views.tutorial
 
-import com.github.mvysny.karibudsl.v10.text
 import com.vaadin.flow.component.UI
 import com.vaadin.flow.component.Unit
-import com.vaadin.flow.component.avatar.Avatar
 import com.vaadin.flow.component.html.*
 import org.riverdell.website.tutorial.Tutorial
 import org.riverdell.website.users.WebsiteUserRepository

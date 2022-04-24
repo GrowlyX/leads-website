@@ -212,6 +212,8 @@ class UserView : VerticalLayout(), BeforeEnterObserver, CompositeLoader<String>
 
             for (tutorial in tutorials.filter {
                 it.author.equals(user.email, true)
+            }.sortedByDescending {
+                it.created
             })
             {
                 this.add(
