@@ -136,14 +136,21 @@ class UserView : VerticalLayout(), HasDynamicTitle, BeforeEnterObserver, Composi
             val components =
                 mutableListOf<Component>()
 
+            var something = false
+
             for (media in user.socialMedia)
             {
                 components.add(
                     Anchor(
                         media.key.template.format(media.value),
-                        " \uD83D\uDF84 " + media.key.fancy
+                        "${
+                            if (something)
+                                " \uD83D\uDF84 " else ""
+                        }${media.key.fancy}"
                     )
                 )
+
+                something = true
             }
 
             val socialMedia = Span(
