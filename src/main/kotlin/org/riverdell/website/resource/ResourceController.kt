@@ -1,12 +1,12 @@
 package org.riverdell.website.resource
 
+import com.vaadin.flow.server.auth.AnonymousAllowed
 import org.apache.commons.io.IOUtils
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
-import java.awt.PageAttributes.MediaType
 import java.io.File
-import java.util.UUID
+import java.util.*
 import javax.servlet.http.HttpServletResponse
 
 /**

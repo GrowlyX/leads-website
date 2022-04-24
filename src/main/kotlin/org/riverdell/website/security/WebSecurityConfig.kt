@@ -29,12 +29,11 @@ open class WebSecurityConfig : VaadinWebSecurityConfigurerAdapter()
 
     override fun configure(web: WebSecurity)
     {
-        super.configure(web)
         web.ignoring()
             .antMatchers(
-                "/resources/banners/*.png",
-                "/resources/static/*.png",
-                "/resources/pictures/*.png"
+                "/resources/banners/*",
+                "/resources/static/*",
+                "/resources/pictures/"
             )
     }
 }

@@ -26,6 +26,7 @@ import com.vaadin.flow.component.notification.Notification
 import com.vaadin.flow.component.orderedlayout.FlexComponent
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout
 import com.vaadin.flow.component.orderedlayout.VerticalLayout
+import com.vaadin.flow.router.HasDynamicTitle
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.RouterLink
 import com.vaadin.flow.server.VaadinServletRequest
@@ -436,6 +437,11 @@ class SiteLayout(
     // Gets current page title
     private fun getCurrentPageTitle(): String
     {
+        if (content is HasDynamicTitle)
+        {
+            return (content as HasDynamicTitle).pageTitle
+        }
+
         val title = content.javaClass
             .getAnnotation(PageTitle::class.java)
 
