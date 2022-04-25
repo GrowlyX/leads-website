@@ -8,7 +8,8 @@ object WebsiteUserAdmins
 {
     val administrators =
         mutableListOf(
-            "subhamktech@gmail.com"
+            "subhamktech@gmail.com",
+            "growly@scala.gg"
         )
 
     val staff =

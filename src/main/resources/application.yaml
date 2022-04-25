@@ -18,6 +18,13 @@ spring:
     oauth2:
       client:
         registration:
+          okta:
+            clientId: "0oaut31oqcJ20cZEG696"
+            client-secret: "FeNamHPtLrqmnF9JSfZ9QY5tKL0YnNvbSYzMqf1c"
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/okta"
+            scope:
+              - "okta.users.read"
           twitter:
             clientId: Q19mdnc1VHRTc2JuSXlIMUIwcVM6MTpjaQ
             clientSecret: zmCTUkhAG7StJGbwkv6LsviVLE3gv86jZXmgmTLEY5e-83vET_
@@ -65,6 +72,11 @@ spring:
             authorizationUri: https://discordapp.com/api/oauth2/authorize
             tokenUri: https://discordapp.com/api/oauth2/token
             userInfoUri: https://discordapp.com/api/users/@me
+            userNameAttribute: username
+          okta:
+            authorizationUri: https://trial-8394303.okta.com/oauth2/v1/authorize
+            tokenUri: https://trial-8394303.okta.com/oauth2/v1/token
+            userInfoUri: https://trial-8394303.okta.com/oauth2/v1/introspect
             userNameAttribute: username
   servlet:
     multipart:

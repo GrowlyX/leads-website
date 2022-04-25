@@ -66,28 +66,21 @@ class LoginView(
                         it.enabled
                     }
 
-                for (provider in providers)
+                for (provider in providers.filter {
+                    it.enabled
+                })
                 {
                     val button = button(
                         "Login with ${provider.name}"
                     ) {
-                        if (provider.enabled)
-                        {
-                            onLeftClick {
-                                UI.getCurrent().page
-                                    .setLocation(provider.uri)
-                            }
+                        onLeftClick {
+                            UI.getCurrent().page
+                                .setLocation(provider.uri)
                         }
 
                         this.icon = provider.icon.create()
                         this.addThemeVariants(
-                            if (provider.enabled)
-                            {
-                                ButtonVariant.LUMO_SUCCESS
-                            } else
-                            {
-                                ButtonVariant.LUMO_ERROR
-                            },
+                            ButtonVariant.LUMO_CONTRAST,
                             ButtonVariant.MATERIAL_OUTLINED
                         )
                     }

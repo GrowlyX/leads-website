@@ -27,6 +27,8 @@ open class WebsiteUserSession
 
         val email = principal
             .getAttribute<String>("email")
+            ?: principal
+                .getAttribute<String>("sub")
             ?: throw IllegalStateException(
                 "OAuth principal does not contain email"
             )
@@ -38,8 +40,8 @@ open class WebsiteUserSession
             ?: "new user ${
                 Random.nextInt(1000000, 9999999)
             }").replace(
-                " ", "-"
-            )
+            " ", "-"
+        )
 
         val picture = principal
             .getAttribute<String>("picture")
